@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Alessandro A. Masi – Computational & Structural Biologist</title>
+  <title>Alessandro A. Masi – Biochemical & Computational Scientist</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Personal academic website of Alessandro Antonio Masi, PhD candidate in Computational and Quantitative Biology." />
+  <meta name="description" content="Personal website of Alessandro Antonio Masi, Biochemical & Computational Scientist, PhD in Computational and Quantitative Biology." />
   <style>
     :root {
       --bg: #0b0d12;
@@ -19,11 +19,7 @@
       --max-width: 960px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: var(--font-sans);
@@ -33,24 +29,13 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-    .shell {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 1.5rem 1.5rem 4rem;
-    }
+    .shell { max-width: var(--max-width); margin: 0 auto; padding: 1.5rem 1.5rem 4rem; }
 
     header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
+      position: sticky; top: 0; z-index: 20;
       backdrop-filter: blur(16px);
       background: linear-gradient(to bottom, rgba(5,6,10,0.95), rgba(5,6,10,0.7));
       border-bottom: 1px solid rgba(255,255,255,0.03);
@@ -66,55 +51,23 @@
       gap: 1rem;
     }
 
-    .nav-left {
-      display: flex;
-      align-items: baseline;
-      gap: 0.5rem;
-    }
-
+    .nav-left { display: flex; align-items: baseline; gap: 0.5rem; }
     .logo {
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      color: var(--accent);
+      font-weight: 700; letter-spacing: 0.04em; font-size: 0.9rem;
+      text-transform: uppercase; color: var(--accent);
     }
+    .tagline { font-size: 0.8rem; color: var(--muted); }
 
-    .tagline {
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.25rem;
-      font-size: 0.9rem;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      position: relative;
-      padding-bottom: 0.15rem;
-    }
-
+    .nav-links { display: flex; gap: 1.25rem; font-size: 0.9rem; }
+    .nav-links a { color: var(--muted); position: relative; padding-bottom: 0.15rem; }
     .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 2px;
-      background: var(--accent);
+      content: ""; position: absolute; left: 0; bottom: 0;
+      width: 0; height: 2px; background: var(--accent);
       transition: width 0.18s ease-out;
     }
+    .nav-links a:hover::after { width: 100%; }
 
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    main {
-      padding-top: 1rem;
-    }
+    main { padding-top: 1rem; }
 
     /* HERO */
     .hero {
@@ -131,30 +84,12 @@
       text-transform: uppercase;
       margin-bottom: 0.6rem;
     }
+    .hero-left h1 span { color: var(--accent); }
 
-    .hero-left h1 span {
-      color: var(--accent);
-    }
+    .hero-role { font-size: 1.05rem; color: var(--muted); margin-bottom: 1.2rem; }
+    .hero-text { font-size: 0.98rem; color: var(--muted); max-width: 32rem; }
 
-    .hero-role {
-      font-size: 1.05rem;
-      color: var(--muted);
-      margin-bottom: 1.2rem;
-    }
-
-    .hero-text {
-      font-size: 0.98rem;
-      color: var(--muted);
-      max-width: 32rem;
-    }
-
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 1.2rem;
-    }
-
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.2rem; }
     .hero-tag {
       font-size: 0.75rem;
       padding: 0.25rem 0.55rem;
@@ -166,13 +101,7 @@
       letter-spacing: 0.06em;
     }
 
-    .hero-actions {
-      margin-top: 1.7rem;
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
-
+    .hero-actions { margin-top: 1.7rem; display: flex; gap: 0.75rem; flex-wrap: wrap; }
     .btn {
       border-radius: 999px;
       padding: 0.55rem 1.1rem;
@@ -185,18 +114,13 @@
       gap: 0.4rem;
       cursor: pointer;
     }
-
     .btn-primary {
       background: linear-gradient(135deg, #4ea1ff, #6e8bff);
       border-color: transparent;
       color: #05060a;
       font-weight: 600;
     }
-
-    .btn:hover {
-      filter: brightness(1.05);
-      text-decoration: none;
-    }
+    .btn:hover { filter: brightness(1.05); text-decoration: none; }
 
     .hero-right {
       background: radial-gradient(circle at top, #27304a 0, #11141b 55%);
@@ -216,10 +140,7 @@
       color: var(--muted);
     }
 
-    .hero-highlight {
-      font-size: 0.9rem;
-      color: var(--text);
-    }
+    .hero-highlight { font-size: 0.9rem; color: var(--text); }
 
     .hero-meta {
       display: grid;
@@ -243,15 +164,10 @@
       margin-bottom: 0.15rem;
     }
 
-    .meta-value {
-      font-size: 0.9rem;
-    }
+    .meta-value { font-size: 0.9rem; }
 
     /* SECTIONS */
-    section {
-      margin: 3rem 0;
-    }
-
+    section { margin: 3rem 0; }
     .section-title {
       font-size: 1.2rem;
       text-transform: uppercase;
@@ -260,116 +176,42 @@
       margin-bottom: 1.4rem;
     }
 
-    .card-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.6fr);
-      gap: 1.8rem;
-    }
+    .card-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.6fr); gap: 1.8rem; }
+    .card { background: rgba(11,13,18,0.9); border-radius: 16px; border: 1px solid var(--border); padding: 1.2rem 1.3rem; }
+    .card h3 { font-size: 1.05rem; margin-bottom: 0.4rem; }
+    .card p { font-size: 0.92rem; color: var(--muted); }
 
-    .card {
-      background: rgba(11,13,18,0.9);
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      padding: 1.2rem 1.3rem;
-    }
-
-    .card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .card p {
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-
-    .list-compact {
-      list-style: none;
-      display: grid;
-      gap: 0.45rem;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .list-compact li span {
-      color: var(--text);
-    }
+    .list-compact { list-style: none; display: grid; gap: 0.45rem; font-size: 0.9rem; color: var(--muted); }
+    .list-compact li span { color: var(--text); }
 
     /* Publications */
-    .pub-list {
-      list-style: none;
-      display: grid;
-      gap: 1rem;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .pub-title {
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    .pub-meta {
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
+    .pub-list { list-style: none; display: grid; gap: 1rem; font-size: 0.9rem; color: var(--muted); }
+    .pub-title { color: var(--text); font-weight: 500; }
+    .pub-meta { font-size: 0.8rem; color: var(--muted); }
 
     /* Contact */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.6fr);
-      gap: 1.6rem;
-      align-items: center;
-    }
+    .contact-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.6fr); gap: 1.6rem; align-items: center; }
+    .contact-block p { font-size: 0.95rem; color: var(--muted); margin-bottom: 0.8rem; }
+    .contact-list { list-style: none; display: grid; gap: 0.4rem; font-size: 0.9rem; }
 
-    .contact-block p {
-      font-size: 0.95rem;
-      color: var(--muted);
-      margin-bottom: 0.8rem;
-    }
-
-    .contact-list {
-      list-style: none;
-      display: grid;
-      gap: 0.4rem;
-      font-size: 0.9rem;
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      margin-top: 2.5rem;
-      padding-top: 1.5rem;
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
+    footer { border-top: 1px solid var(--border); margin-top: 2.5rem; padding-top: 1.5rem; text-align: center; font-size: 0.8rem; color: var(--muted); }
 
     @media (max-width: 880px) {
-      .hero {
-        grid-template-columns: minmax(0,1fr);
-      }
-      .card-grid,
-      .contact-grid {
-        grid-template-columns: minmax(0,1fr);
-      }
-      .nav-links {
-        display: none;
-      }
-      .shell {
-        padding-inline: 1.1rem;
-      }
-      .nav {
-        padding-inline: 1.1rem;
-      }
+      .hero { grid-template-columns: minmax(0,1fr); }
+      .card-grid, .contact-grid { grid-template-columns: minmax(0,1fr); }
+      .nav-links { display: none; }
+      .shell { padding-inline: 1.1rem; }
+      .nav { padding-inline: 1.1rem; }
     }
   </style>
 </head>
+
 <body>
   <header>
     <nav class="nav">
       <div class="nav-left">
         <div class="logo">A.A. MASI</div>
-        <div class="tagline">Computational & Structural Biology</div>
+        <div class="tagline">Biochemical & Computational Science</div>
       </div>
       <div class="nav-links">
         <a href="#about">About</a>
@@ -383,97 +225,98 @@
 
   <main class="shell">
     <!-- HERO -->
-   <section class="hero">
-  <div class="hero-left">
-    <h1>Alessandro Antonio <span>Masi</span></h1>
-    <div class="hero-role">PhD Candidate in Computational & Quantitative Biology</div>
-    <p class="hero-text">
-      I am a scientist with experience in protein biochemistry, molecular recognition and computational modelling.
-      My work encompasses experimental biophysics, including native MS, ITC and fluorescence assays, as well as 
-      structural analysis through molecular dynamics simulations and docking. I have collaborated on multidisciplinary projects in immunology, microbial pathogenesis, and translational glycobiology.
-      I have supported the generation of data, troubleshooting of assays, and scientific reporting for both experimental and computational pipelines.
-      <b>structural biology</b>, <b>biophysics</b> and <b>computational modelling</b>.
-      My work focuses on Siglec-7–mediated recognition of endogenous and microbial glycoconjugates.
-    </p>
+    <section class="hero" id="about">
+      <div class="hero-left">
+        <h1>Alessandro Antonio <span>Masi</span></h1>
+        <div class="hero-role">Biochemical & Computational Scientist · PhD in Computational and Quantitative Biology (2022–2025, final discussion 02/26)</div>
 
-    <div class="hero-tags">
-      <div class="hero-tag">Molecular recognition</div>
-      <div class="hero-tag">Protein–glycan interactions</div>
-      <div class="hero-tag">MD & native MS</div>
-    </div>
+        <p class="hero-text">
+          I am a licensed biologist with multidisciplinary experience in protein biochemistry, molecular interaction analysis,
+          mass spectrometry, and structural/computational biology. My work integrates experimental and in silico data to study
+          protein–ligand systems, with a focus on Siglec-7 recognition of gangliosides and bacterial glycans.
+          I develop end-to-end scientific pipelines, from sample preparation and acquisition (ITC, fluorescence, NMR, native MS)
+          to advanced analysis and modeling via molecular dynamics and docking.
+          I am currently expanding my profile toward clinical research, with a focus on GCP/GMP principles, regulatory documentation,
+          and quality processes in biotech, pharma, and CRO environments.
+        </p>
 
-    <div class="hero-actions">
-      <a class="btn btn-primary" 
-         href="Alessandro_Masi_CV.pdf" 
-         target="_blank" 
-         rel="noopener" 
-         download>
-         Download CV
-      </a>
+        <div class="hero-tags">
+          <div class="hero-tag">Protein–glycan recognition</div>
+          <div class="hero-tag">Native MS · ITC · NMR</div>
+          <div class="hero-tag">MD · Docking · Python</div>
+        </div>
 
-      <a class="btn" 
-         href="https://scholar.google.com/citations?user=o7OFh5cAAAAJ&hl=it" 
-         target="_blank" 
-         rel="noopener">
-         View publications
-      </a>
-    </div>
-  </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary"
+             href="Alessandro_Masi_CV.pdf"
+             target="_blank"
+             rel="noopener"
+             download>
+             Download CV
+          </a>
 
-  <!-- RIGHT SIDE: PHOTO + META INFO -->
-  <div class="hero-right">
-    <img src="profile.jpg" alt="Alessandro Antonio Masi" 
-         style="width:100%; border-radius:12px; margin-bottom:1rem; border:1px solid rgba(255,255,255,0.25); box-shadow:0 8px 22px rgba(0,0,0,0.4);">
-
-    <div class="hero-pill">Currently</div>
-
-    <div class="hero-highlight">
-      PhD candidate at University of Naples Federico II, exploring Siglec-7
-      recognition across self and non-self glycans.
-    </div>
-
-    <div class="hero-meta">
-      <div class="meta-item">
-        <div class="meta-label">Location</div>
-        <div class="meta-value">Milan, Italy</div>
+          <a class="btn"
+             href="https://orcid.org/0000-0001-5932-7794"
+             target="_blank"
+             rel="noopener">
+             ORCID
+          </a>
+        </div>
       </div>
 
-      <div class="meta-item">
-        <div class="meta-label">Research areas</div>
-        <div class="meta-value">Glycobiology, biophysics, computational chemistry</div>
-      </div>
+      <!-- RIGHT SIDE: PHOTO + META INFO -->
+      <div class="hero-right">
+        <img src="profile.jpg" alt="Alessandro Antonio Masi"
+             style="width:100%; border-radius:12px; margin-bottom:1rem; border:1px solid rgba(255,255,255,0.25); box-shadow:0 8px 22px rgba(0,0,0,0.4);">
 
-      <div class="meta-item">
-        <div class="meta-label">Status</div>
-        <div class="meta-value">PhD – expected Jan 2026</div>
-      </div>
+        <div class="hero-pill">Currently</div>
 
-      <div class="meta-item">
-        <div class="meta-label">Open to</div>
-        <div class="meta-value">Postdoctoral positions & collaborations</div>
+        <div class="hero-highlight">
+          R&amp;D researcher (2022–2025) at University of Naples Federico II and visiting researcher at the ISPSO Institute (Université de Genève, Mar–Apr 2025),
+          working on quantitative characterization of protein–ligand interactions and glycan recognition.
+        </div>
+
+        <div class="hero-meta">
+          <div class="meta-item">
+            <div class="meta-label">Location</div>
+            <div class="meta-value">Milano (20132), Italy</div>
+          </div>
+
+          <div class="meta-item">
+            <div class="meta-label">Focus</div>
+            <div class="meta-value">Glycobiology · Biophysics · Computational modeling</div>
+          </div>
+
+          <div class="meta-item">
+            <div class="meta-label">Status</div>
+            <div class="meta-value">PhD (2022–2025), final discussion 02/26</div>
+          </div>
+
+          <div class="meta-item">
+            <div class="meta-label">Open to</div>
+            <div class="meta-value">Clinical research · Biotech/Pharma · CRO roles</div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- RESEARCH DETAILS -->
     <section id="research">
-      <h2 class="section-title">Selected Projects</h2>
+      <h2 class="section-title">Selected Experience & Projects</h2>
       <div class="card-grid">
         <div class="card">
-          <h3>Siglec-7 recognition of gangliosides</h3>
+          <h3>Siglec-7 recognition models (self & non-self glycans)</h3>
           <p>
-            Structural and thermodynamic characterization of Siglec-7 binding to gangliosides,
-            combining NMR protein assignment, ITC, fluorescence, MD simulations and native MS
-            to understand how ligand flexibility shapes recognition.
+            Integration of experimental and in silico data to define molecular recognition models for Siglec-7 with gangliosides and bacterial glycans.
+            Development of computational pipelines for MD trajectory analysis, docking, and glycan conformational sampling.
           </p>
         </div>
+
         <div class="card">
-          <h3>Siglec-7 and microbial glycoconjugates</h3>
+          <h3>Ion mobility native MS kinetics (Université de Genève)</h3>
           <p>
-            Investigation of Siglec-7 interaction with <i>Neisseria meningitidis</i> CPS and 
-            <i>Fusobacterium nucleatum</i> LPS O-antigens, linking molecular recognition to potential 
-            immune evasion mechanisms.
+            Quantification of association/dissociation kinetics across 21 protein–ligand systems using Bruker timsTOF SCP (ion mobility MS).
+            Data interrogation and interpretation of binding profiles.
           </p>
         </div>
       </div>
@@ -485,29 +328,28 @@
       <ul class="pub-list">
         <li>
           <div class="pub-title">
-            Insights into Siglec-7 Binding to Gangliosides: NMR Protein Assignment and the Impact of Ligand Flexibility
-          </div>
-          <div class="pub-meta">
-            Advanced Science, 2025 – Di Carluccio et al. (co-author)<br />
-            Contribution: ITC, fluorescence binding assays, MD simulations.
-          </div>
-        </li>
-        <li>
-          <div class="pub-title">
             Molecular Basis of Siglec-7 Recognition by Neisseria meningitidis Serogroup Y CPS: Implications for Immune Evasion
           </div>
           <div class="pub-meta">
-            JACS Au, 2025 – Di Carluccio et al. (co-author)<br />
-            Contribution: MD simulations, fluorescence titrations, ITC.
+            JACS Au, 2025 · Gerpe Amor, T.; Masi, A.A.; Silipo, A. et al. · doi:10.1021/jacsau.5c00214
           </div>
         </li>
+
         <li>
           <div class="pub-title">
-            Fusobacterium nucleatum Lipopolysaccharides O-Antigen Defines a Novel Siglec-7 Binding Epitope
+            The Conformational Features of Fusobacterium nucleatum subsp. polymorphum 10953 LPS O-Antigen Mediate its Interaction with Siglec-7 and Unveil a Novel Binding Epitope
           </div>
           <div class="pub-meta">
-            JACS Au, 2025 – Di Carluccio et al. (co-author)<br />
-            Contribution: ITC, fluorescence assays, MD simulations.
+            JACS Au, 2025 · Di Carluccio, C.; Masi, A.A.; Silipo, A. et al. · doi:10.1021/jacsau.5c00810
+          </div>
+        </li>
+
+        <li>
+          <div class="pub-title">
+            Insights into Siglec-7 Binding to Gangliosides: NMR Protein Assignment and the Impact of Ligand Flexibility
+          </div>
+          <div class="pub-meta">
+            Advanced Science, 2025 · Di Carluccio, C.; Masi, A.A.; Silipo, A. et al. · doi:10.1002/advs.202415782
           </div>
         </li>
       </ul>
@@ -518,23 +360,31 @@
       <h2 class="section-title">Skills</h2>
       <div class="card-grid">
         <div class="card">
-          <h3>Computational</h3>
+          <h3>Computational & Data</h3>
           <ul class="list-compact">
-            <li><span>Molecular dynamics:</span> GROMACS, Desmond, NAMD, AMBER</li>
-            <li><span>Docking:</span> AutoDock Vina, Schrödinger Glide</li>
-            <li><span>Python:</span> NumPy, Pandas, SciPy, Matplotlib, Biopython, MDAnalysis, MDTraj, PyMOL API, Jupyter</li>
-            <li><span>Visualization:</span> PyMOL, VMD, ChimeraX, NGLview</li>
-            <li><span>Environment:</span> Linux, Bash, Git/GitHub</li>
+            <li><span>OS / CLI:</span> Linux, Windows · intensive command-line usage</li>
+            <li><span>Python (Jupyter):</span> NumPy, Pandas, Matplotlib, Biopython, MDAnalysis, MDTraj, NGLview</li>
+            <li><span>Structure prediction:</span> AlphaFold, RosettaFold (Colab & local)</li>
+            <li><span>Docking:</span> AutoDock, AutoDock Vina, HADDOCK</li>
+            <li><span>Molecular dynamics:</span> AMBER/AmberTools, GROMACS, Desmond · ligand parametrization · trajectory analysis</li>
+            <li><span>Visualization:</span> PyMOL, UCSF Chimera, Discovery Studio, Schrödinger Maestro</li>
+            <li><span>MS data analysis:</span> Bruker DataAnalysis, MATLAB (high-resolution ESI-MS datasets)</li>
+            <li><span>Versioning:</span> Git/GitHub</li>
           </ul>
         </div>
+
         <div class="card">
-          <h3>Experimental & Biophysical</h3>
+          <h3>Wet Lab, Biophysical & Analytical</h3>
           <ul class="list-compact">
-            <li><span>Biophysics:</span> ITC, fluorescence binding assays</li>
-            <li><span>Mass spectrometry:</span> native MS (timsTOF SCP, Q-ToF)</li>
-            <li><span>NMR:</span> STD-NMR, titration experiments, epitope mapping</li>
-            <li><span>Protein work:</span> expression & HPLC-based purification</li>
-            <li><span>Sample prep:</span> glycan/protein preparation for MS/NMR</li>
+            <li><span>Purification:</span> FPLC/ÄKTA Pure · SEC, IMAC · proteins/glycans</li>
+            <li><span>Electrophoresis:</span> agarose gel, SDS-PAGE (Coomassie, silver), Western Blot</li>
+            <li><span>Molecular biology:</span> cloning vectors · transformation · heterologous expression in E. coli</li>
+            <li><span>Sample prep:</span> GC-MS, MALDI-ToF, native ESI-MS</li>
+            <li><span>Native MS:</span> Bruker timsTOF SCP (ion mobility) · affinity & stoichiometry</li>
+            <li><span>NMR:</span> COSY, NOESY, ROESY, TOCSY, HSQC, HMBC, HSQC-TOCSY · STD-NMR epitope mapping</li>
+            <li><span>ITC:</span> sample preparation · experiments · thermodynamic analysis</li>
+            <li><span>Fluorescence titrations:</span> binding studies (Kb, KD, ΔH)</li>
+            <li><span>Microbiology:</span> small/large scale cultures · isotopic labeling · standard lab instrumentation</li>
           </ul>
         </div>
       </div>
@@ -546,21 +396,24 @@
       <div class="contact-grid">
         <div class="contact-block">
           <p>
-            I am open to <b>postdoctoral opportunities</b>, collaborations in structural/computational
-            glycobiology, and interdisciplinary projects at the interface between biophysics,
-            glycans and immune recognition.
+            I’m interested in roles at the interface of quantitative bioscience, biophysics, and translational glycobiology,
+            and I’m actively strengthening my profile toward clinical research through GCP/GMP principles, regulatory documentation, and quality processes.
           </p>
           <p>
-            If you think my profile could fit your group or project, feel free to reach out.
+            If you’re hiring for biotech/pharma/CRO positions or looking for a hybrid experimental–computational profile, reach out.
           </p>
         </div>
+
         <div class="card">
           <ul class="contact-list">
             <li><b>Email:</b> <a href="mailto:alessandroantoniomasi69@gmail.com">alessandroantoniomasi69@gmail.com</a></li>
-            <li><b>Location:</b> Milan, Italy</li>
-            <li><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/alessandro-masi-biologist" target="_blank" rel="noopener">linkedin.com/in/alessandro-masi-biologist</a></li>
-            <!-- Se fai GitHub pubblico, aggiungi: -->
-            <!-- <li><b>GitHub:</b> <a href="https://github.com/TUOUSERNAME" target="_blank" rel="noopener">github.com/TUOUSERNAME</a></li> -->
+            <li><b>Phone:</b> <a href="tel:+393271159384">+39 327 115 9384</a></li>
+            <li><b>Location:</b> Milano (20132), Italy</li>
+            <li><b>LinkedIn:</b> <a href="https://linkedin.com/in/alessandro-masi-biologist" target="_blank" rel="noopener">linkedin.com/in/alessandro-masi-biologist</a></li>
+            <li><b>ORCID:</b> <a href="https://orcid.org/0000-0001-5932-7794" target="_blank" rel="noopener">0000-0001-5932-7794</a></li>
+            <!-- Optional:
+            <li><b>GitHub:</b> <a href="https://github.com/TUOUSERNAME" target="_blank" rel="noopener">github.com/TUOUSERNAME</a></li>
+            -->
           </ul>
         </div>
       </div>
@@ -572,13 +425,7 @@
   </main>
 
   <script>
-    // Small helper to keep year updated
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
-
-
-
-
