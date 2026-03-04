@@ -11,7 +11,8 @@
         h1, h2, h3, h4 { font-family: 'Merriweather', serif; }
         .modal-active { overflow: hidden; }
         .gradient-blue { background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%); }
-        .conf-card:hover { border-left-color: #2563eb; transform: translateX(8px); }
+        .conf-card, .pub-card { border-left: 4px solid transparent; transition: all 0.3s ease; }
+        .conf-card:hover, .pub-card:hover { border-left-color: #2563eb; transform: translateX(8px); background-color: #f8fafc; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -23,7 +24,7 @@
                 <a href="#about" class="hover:text-blue-600 transition">Profilo</a>
                 <a href="#progetti" class="hover:text-blue-600 transition">Ricerca</a>
                 <a href="#conferenze" class="hover:text-blue-600 transition">Conferenze</a>
-                <a href="#pubblicazioni" class="hover:text-blue-600 transition">Pubblicazioni</a>
+                <a href="#pubblicazioni" class="hover:text-blue-600 transition text-blue-600">Pubblicazioni</a>
                 <a href="#contatti" class="text-blue-700 underline decoration-2 underline-offset-4">Contatto</a>
             </div>
         </div>
@@ -76,71 +77,104 @@
                         <div class="absolute bottom-6 left-6 text-white text-xs font-bold uppercase tracking-widest bg-indigo-600/80 backdrop-blur px-4 py-2 rounded-xl">Immuno-Oncology</div>
                     </div>
                     <h3 class="text-2xl font-bold mb-3 group-hover:text-indigo-600 transition">Siglec-7: Molecular Immune Evasion</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-4 line-clamp-2">Studio atomistico del riconoscimento di sialoglicani (gangliosidi e LPS) da parte dei recettori inibitori Siglec.</p>
-                    <span class="text-indigo-700 font-black text-xs uppercase tracking-widest">Vedi Risultati →</span>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-4 line-clamp-2">Studio atomistico del riconoscimento di sialoglicani da parte dei recettori inibitori Siglec.</p>
+                    <span class="text-indigo-700 font-black text-xs uppercase tracking-widest">Vedi Dettagli →</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="conferenze" class="py-24 bg-slate-50 overflow-hidden">
+    <section id="conferenze" class="py-24 bg-slate-50">
         <div class="max-w-6xl mx-auto px-6">
             <div class="mb-16">
                 <h2 class="text-4xl font-bold text-slate-900 mb-4">Conferences & Symposia</h2>
                 <div class="h-1.5 w-20 bg-blue-600 rounded-full"></div>
             </div>
-
             <div class="grid lg:grid-cols-2 gap-6">
-                <div class="conf-card bg-white p-8 rounded-3xl border-l-8 border-transparent shadow-sm transition-all duration-300">
+                <div class="conf-card bg-white p-8 rounded-3xl shadow-sm">
                     <div class="flex justify-between items-start mb-4">
                         <span class="text-blue-600 font-black text-[10px] uppercase tracking-widest">2025 | International</span>
                         <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-lg text-[9px] font-bold uppercase">Flash Oral + Poster</span>
                     </div>
                     <h4 class="text-xl font-bold text-slate-800 mb-2 leading-tight">EuroCarb22 – International Symposium in Glycosciences</h4>
-                    <p class="text-slate-500 text-sm italic mb-4">"Molecular Exploitation of Neisseria gonorrhoeae LOS Recognition by the Therapeutic Antibody 2C7"</p>
+                    <p class="text-slate-500 text-sm italic italic">"Molecular Exploitation of Neisseria gonorrhoeae LOS Recognition by the Therapeutic Antibody 2C7"</p>
                 </div>
-
-                <div class="conf-card bg-white p-8 rounded-3xl border-l-8 border-transparent shadow-sm transition-all duration-300">
+                <div class="conf-card bg-white p-8 rounded-3xl shadow-sm">
                     <div class="flex justify-between items-start mb-4">
                         <span class="text-blue-600 font-black text-[10px] uppercase tracking-widest">2025 | National</span>
                         <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-lg text-[9px] font-bold uppercase">Oral Presentation</span>
                     </div>
                     <h4 class="text-xl font-bold text-slate-800 mb-2 leading-tight">XIX Convegno-Scuola sulla Chimica dei Carboidrati (CSCC)</h4>
-                    <p class="text-slate-500 text-sm italic mb-4">"Structural Clues to Target Neisseria gonorrhoeae by Deciphering the 2C7 Epitope"</p>
+                    <p class="text-slate-500 text-sm italic">"Structural Clues to Target Neisseria gonorrhoeae by Deciphering the 2C7 Epitope"</p>
                 </div>
-
-                <div class="conf-card bg-white p-8 rounded-3xl border-l-8 border-transparent shadow-sm transition-all duration-300">
+                <div class="conf-card bg-white p-8 rounded-3xl shadow-sm">
                     <div class="flex justify-between items-start mb-4">
-                        <span class="text-blue-600 font-black text-[10px] uppercase tracking-widest">2024 | National</span>
-                        <span class="bg-slate-100 text-slate-600 px-3 py-1 rounded-lg text-[9px] font-bold uppercase">Poster</span>
+                        <span class="text-blue-600 font-black text-[10px] uppercase tracking-widest">2023 | International</span>
+                        <span class="bg-slate-100 text-slate-600 px-3 py-1 rounded-lg text-[9px] font-bold uppercase">Poster Exposition</span>
                     </div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2 leading-tight">SCI 2024 – Congresso Nazionale Società Chimica Italiana</h4>
-                    <p class="text-slate-500 text-sm italic mb-4">"Resolving the Structural Complexity of Antibody–Epitope Interaction in Neisseria gonorrhoeae"</p>
+                    <h4 class="text-xl font-bold text-slate-800 mb-2 leading-tight">EuroCarb21 – International Symposium in Glycosciences</h4>
+                    <p class="text-slate-500 text-sm italic">Characterization of glycan-based interactions in immune evasion and pathogenesis.</p>
                 </div>
-
-                <div class="conf-card bg-white p-8 rounded-3xl border-l-8 border-transparent shadow-sm transition-all duration-300">
+                <div class="conf-card bg-white p-8 rounded-3xl shadow-sm">
                     <div class="flex justify-between items-start mb-4">
                         <span class="text-blue-600 font-black text-[10px] uppercase tracking-widest">2023 | International</span>
                         <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-lg text-[9px] font-bold uppercase">Poster + Flash Oral</span>
                     </div>
                     <h4 class="text-xl font-bold text-slate-800 mb-2 leading-tight">IMYR23 – International Meeting of Young Researchers</h4>
-                    <p class="text-slate-500 text-sm italic mb-4">"Exploring the Interaction Between Siglec-7 and Disialylated Gangliosides"</p>
+                    <p class="text-slate-500 text-sm italic">"Exploring the Interaction Between Siglec-7 and Disialylated Gangliosides"</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="pubblicazioni" class="py-24 bg-white">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-12">Selected Publications</h2>
-            <div class="space-y-6 text-left">
-                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-blue-200 transition">
-                    <span class="text-[10px] font-black text-blue-600 uppercase mb-2 block">JACS Au | 2025</span>
-                    <h4 class="text-lg font-bold text-slate-800">Fusobacterium nucleatum LPS O-Antigen Defines a Novel Siglec-7 Binding Epitope</h4>
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="mb-16">
+                <h2 class="text-4xl font-bold text-slate-900 mb-4">Publications</h2>
+                <div class="h-1.5 w-20 bg-blue-600 rounded-full"></div>
+            </div>
+            
+            <div class="space-y-8">
+                <div class="pub-card bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-md">
+                    <div class="flex flex-wrap gap-3 mb-4">
+                        <span class="bg-blue-900 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">JACS Au</span>
+                        <span class="text-slate-400 text-[10px] font-bold uppercase tracking-widest">2025-11-24</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-4 leading-snug">Fusobacterium nucleatum Lipopolysaccharides O-Antigen Defines a Novel Siglec-7 Binding Epitope</h4>
+                    <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+                        <strong>Contributors:</strong> Cristina Di Carluccio, Ferran Nieto-Fabregat, Linda Cerofolini, Celeste Abreu, Luis Padilla-Cortés, Giulia Roxana Gheorghita, <strong>Alessandro Antonio Masi</strong>, Lorena Buono, Manasik Gumah Adam Ali, Dimitra Lamprinaki et al.
+                    </p>
+                    <a href="https://doi.org/10.1021/jacsau.4c01014" target="_blank" class="inline-flex items-center text-blue-600 font-bold text-xs uppercase tracking-widest hover:gap-2 transition-all">
+                        Leggi Articolo Completo <span class="ml-2">↗</span>
+                    </a>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-blue-200 transition">
-                    <span class="text-[10px] font-black text-blue-600 uppercase mb-2 block">Advanced Science | 2025</span>
-                    <h4 class="text-lg font-bold text-slate-800">Insights into Siglec-7 Binding to Gangliosides: Impact of Ligand Flexibility</h4>
+
+                <div class="pub-card bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-md">
+                    <div class="flex flex-wrap gap-3 mb-4">
+                        <span class="bg-blue-900 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">JACS Au</span>
+                        <span class="text-slate-400 text-[10px] font-bold uppercase tracking-widest">2025-05-26</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-4 leading-snug">Molecular Basis of Siglec-7 Recognition by Neisseria meningitidis Serogroup Y CPS: Implications for Immune Evasion</h4>
+                    <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+                        <strong>Contributors:</strong> Cristina Di Carluccio, Tania Gerpe Amor, Maria Pia Lenza, <strong>Alessandro Antonio Masi</strong>, Celeste Abreu, Viviana Longo, Francesco Albano, Ferran Nieto-Fabregat, Paola Salvatore, Geppino Falco et al.
+                    </p>
+                    <a href="https://doi.org/10.1021/jacsau.4c00821" target="_blank" class="inline-flex items-center text-blue-600 font-bold text-xs uppercase tracking-widest hover:gap-2 transition-all">
+                        Leggi Articolo Completo <span class="ml-2">↗</span>
+                    </a>
+                </div>
+
+                <div class="pub-card bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-md">
+                    <div class="flex flex-wrap gap-3 mb-4">
+                        <span class="bg-indigo-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Advanced Science</span>
+                        <span class="text-slate-400 text-[10px] font-bold uppercase tracking-widest">2025-04-26</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-4 leading-snug">Insights into Siglec-7 Binding to Gangliosides: NMR Protein Assignment and the Impact of Ligand Flexibility</h4>
+                    <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+                        <strong>Contributors:</strong> Cristina Di Carluccio, Luis Padilla‐Cortés, Marta Tiemblo‐Martìn, Giulia Roxana Gheorghita, Rosario Oliva, Linda Cerofolini, <strong>Alessandro Antonio Masi</strong>, Celeste Abreu, Hsin‐Kai Tseng, Antonio Molinaro et al.
+                    </p>
+                    <a href="https://doi.org/10.1002/advs.202415782" target="_blank" class="inline-flex items-center text-blue-600 font-bold text-xs uppercase tracking-widest hover:gap-2 transition-all">
+                        Leggi Articolo Completo <span class="ml-2">↗</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -149,13 +183,12 @@
     <footer id="contatti" class="bg-slate-900 text-white py-20 px-6">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="text-4xl font-bold mb-8 italic">Let's connect</h2>
-            <p class="text-slate-400 mb-12 max-w-xl mx-auto">Disponibile per collaborazioni in R&D farmaceutico, Drug Discovery e Structural Biology.</p>
-            <div class="flex flex-wrap justify-center gap-8 mb-16 font-bold text-sm uppercase tracking-widest text-blue-400">
+            <div class="flex flex-wrap justify-center gap-10 mb-16 font-bold text-sm uppercase tracking-widest text-blue-400">
                 <a href="mailto:alessandroantoniomasi69@gmail.com" class="hover:text-white transition">Email</a>
                 <a href="https://linkedin.com/in/alessandro-masi-biologist" target="_blank" class="hover:text-white transition">LinkedIn</a>
                 <a href="https://orcid.org/0000-0001-5932-7794" target="_blank" class="hover:text-white transition">ORCID</a>
             </div>
-            <p class="text-[10px] text-slate-600 uppercase tracking-widest">© 2026 Alessandro Antonio Masi</p>
+            <p class="text-[10px] text-slate-600 uppercase tracking-widest">© 2026 Alessandro Antonio Masi — Scientific Portfolio</p>
         </div>
     </footer>
 
@@ -163,21 +196,33 @@
         <div class="bg-white w-full max-w-6xl h-full overflow-y-auto rounded-[3rem] shadow-2xl relative">
             <button onclick="closeModal('modal-neisseria')" class="absolute top-8 right-8 w-12 h-12 flex items-center justify-center rounded-full bg-slate-100 hover:bg-red-50 hover:text-red-600 transition font-bold text-xl">&times;</button>
             <div class="p-10 lg:p-20">
-                <h3 class="text-4xl font-bold text-blue-900 mb-6">Case Study: 2C7 Epitope & Tetra-1</h3>
+                <h3 class="text-4xl font-bold text-blue-900 mb-4">Case Study: 2C7 Epitope & Tetra-1</h3>
                 <p class="text-blue-600 font-bold uppercase text-xs tracking-[0.3em] mb-12">Structural Biology & Vaccine Design</p>
                 <div class="grid lg:grid-cols-2 gap-20 mb-20">
                     <div>
-                        <h4 class="text-sm font-black uppercase text-slate-400 mb-4 tracking-widest">Il Problema</h4>
-                        <p class="text-slate-700 leading-relaxed text-lg mb-8">N. gonorrhoeae sfrutta la variazione dei lipo-oligosaccaridi (LOS) per evadere il sistema immunitario. L'anticorpo 2C7 è un potente target protettivo, ma richiedeva un mimitopo stabile per lo sviluppo vaccinale.</p>
-                        <h4 class="text-sm font-black uppercase text-slate-400 mb-4 tracking-widest">La Strategia</h4>
-                        <p class="text-slate-700 leading-relaxed">Caratterizzazione di Tetra-1 tramite STD-NMR e simulazioni di Dinamica Molecolare (1μs) per mappare l'interfaccia di legame Fab-antigene.</p>
+                        <h4 class="text-xs font-black uppercase text-slate-400 mb-4 tracking-widest">Scientific Background</h4>
+                        <p class="text-slate-600 leading-relaxed italic mb-8 italic">"Decifrare la resistenza: Lo sviluppo di mimitopi sintetici per superare la variazione antigenica di N. gonorrhoeae."</p>
+                        <p class="text-slate-600 leading-relaxed">Attraverso un workflow ibrido, abbiamo mappato l'epitopo dell'anticorpo protettivo 2C7. L'identificazione di Tetra-1 come mimitopo apre nuove strade per il Vaccine Design contro ceppi multiresistenti.</p>
                     </div>
-                    <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100">
-                        <div class="text-center">
-                            <span class="text-[11px] font-bold text-blue-900 uppercase">Validazione Termodinamica (ITC)</span>
-                            <p class="text-xs text-slate-500 mt-2">Binding spontaneo, entalpico. <strong>K<sub>D</sub> ≈ 2 μM</strong>. ΔH = -43.3 kJ/mol.</p>
-                        </div>
+                    <div class="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 text-center">
+                        <img src="itc_data.png" alt="ITC Data" class="w-full rounded-2xl shadow-md mb-4">
+                        <span class="text-[10px] font-black text-blue-900 uppercase">Thermodynamic Profile (ITC)</span>
+                        <p class="text-xs text-slate-500 mt-2 italic">K<sub>D</sub> ≈ 2 μM | ΔH = -43.3 kJ/mol</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-siglec" class="fixed inset-0 z-[100] hidden bg-slate-900/95 backdrop-blur-xl p-4 md:p-10">
+        <div class="bg-white w-full max-w-6xl h-full overflow-y-auto rounded-[3rem] shadow-2xl relative">
+            <button onclick="closeModal('modal-siglec')" class="absolute top-8 right-8 w-12 h-12 flex items-center justify-center rounded-full bg-slate-100 hover:bg-red-50 hover:text-red-600 transition font-bold text-xl">&times;</button>
+            <div class="p-10 lg:p-20">
+                <h3 class="text-4xl font-bold text-indigo-900 mb-4">Siglec-7: Molecular Immune Evasion</h3>
+                <p class="text-indigo-600 font-bold uppercase text-xs tracking-[0.3em] mb-12">Immuno-Oncology & Pathogenesis</p>
+                <div class="max-w-3xl">
+                    <p class="text-slate-700 leading-relaxed text-lg mb-8">Studio atomistico del riconoscimento di sialoglicani da parte dei recettori inibitori Siglec, focalizzato sui meccanismi di evasione tumorale e batterica. Ricerca pubblicata su <strong>JACS Au</strong> e <strong>Advanced Science</strong>.</p>
+                    <a href="#pubblicazioni" onclick="closeModal('modal-siglec')" class="inline-block py-4 px-10 bg-indigo-900 text-white rounded-2xl font-bold text-sm">Vedi Pubblicazioni</a>
                 </div>
             </div>
         </div>
@@ -191,6 +236,11 @@
         function closeModal(id) {
             document.getElementById(id).classList.add('hidden');
             document.body.classList.remove('modal-active');
+        }
+        window.onclick = function(event) {
+            if (event.target.id.startsWith('modal-')) {
+                closeModal(event.target.id);
+            }
         }
         window.onkeydown = function(event) {
             if (event.key === "Escape") {
