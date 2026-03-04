@@ -1,158 +1,104 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alessandro Antonio Masi | Scientific Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        h1, h2, h3 { font-family: 'Merriweather', serif; }
-        .gradient-text { background: linear-gradient(90deg, #1e3a8a, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    </style>
-</head>
-<body class="bg-slate-50 text-slate-900">
-
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 py-4">
-        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
-            <span class="font-bold tracking-tight text-xl text-blue-900">A.A. MASI</span>
-            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
-                <a href="#about" class="hover:text-blue-600 transition">Profilo</a>
-                <a href="#progetti" class="hover:text-blue-600 transition">Ricerca</a>
-                <a href="#pubblicazioni" class="hover:text-blue-600 transition">Pubblicazioni</a>
-                <a href="#contatti" class="text-blue-700 font-bold underline decoration-2">Contatto</a>
-            </div>
-        </div>
-    </nav>
-
-    <header id="about" class="max-w-6xl mx-auto px-6 py-16 lg:py-24">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <span class="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider mb-4">R&D Scientist | Biologo Abilitato</span>
-                <h1 class="text-4xl lg:text-6xl mb-6 leading-tight">Decifrare le interazioni <span class="gradient-text">Glico-Immunitarie</span>.</h1>
-                <p class="text-lg text-slate-600 mb-8 leading-relaxed">
-                    Specializzato nella caratterizzazione strutturale proteina-ligando. Unisco <strong>Biofisica Sperimentale</strong> (NMR, Native MS, ITC) e <strong>Biochimica Computazionale</strong> (MD) per accelerare la Drug Discovery e il Vaccine Design.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#progetti" class="bg-blue-900 text-white px-8 py-3 rounded-lg font-semibold shadow-lg hover:bg-blue-800 transition">Vedi Progetti</a>
-                    <a href="https://linkedin.com/in/alessandro-masi-biologist" target="_blank" class="border border-slate-300 px-8 py-3 rounded-lg font-semibold hover:bg-white transition">LinkedIn</a>
-                </div>
-            </div>
-            <div class="relative">
-                <div class="w-full aspect-video bg-slate-200 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                    <img src="https://images.unsplash.com/photo-1579152276503-605697479713?auto=format&fit=crop&q=80" alt="Laboratory Context" class="w-full h-full object-cover opacity-90">
-                </div>
-                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl hidden lg:block">
-                    <p class="text-3xl font-bold text-blue-900">-60%</p>
-                    <p class="text-xs text-slate-500 uppercase font-bold tracking-tighter">Tempo d'analisi (ISPSO Geneva)</p>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section id="progetti" class="py-20 bg-slate-100">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl mb-4">Ricerca & Sviluppo</h2>
-            <p class="text-slate-600 mb-12 max-w-2xl">Focus sullo studio dei mimetismi glicanici utilizzati dai patogeni per l'evasione immunitaria.</p>
+<section id="progetti" class="py-20 bg-slate-100">
+    <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl mb-4">Ricerca & Sviluppo</h2>
+        <p class="text-slate-600 mb-12 max-w-2xl">Focus sulla Drug Discovery e la caratterizzazione biofisica di complessi proteina-ligando.</p>
+        
+        <div class="grid md:grid-cols-2 gap-8">
             
-            <div class="grid md:grid-cols-2 gap-8">
-                
-                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-start mb-6">
-                            <span class="bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-1 rounded uppercase">Vaccine Design</span>
-                            <span class="text-slate-400 text-xs italic italic">In Progress</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 text-slate-800 leading-tight">Targeting N. gonorrhoeae: Decifrare l'epitopo 2C7</h3>
-                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
-                            Identificazione del mimitopo sintetico <strong>Tetra-1</strong>. Studio atomistico dell'interazione mAb-antigene tramite integrazione di <strong>STD-NMR, tr-NOESY</strong> e <strong>Dinamica Molecolare (MD)</strong>. Affinità validata via ITC ($K_D = 2 \mu M$).
-                        </p>
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 flex flex-col">
+                <div class="h-48 bg-slate-200">
+                    <img src="graphical_abstract_2c7.png" alt="2C7 Epitope Mapping" class="w-full h-full object-cover">
+                </div>
+                <div class="p-8 flex-grow">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-1 rounded uppercase">Vaccine Design</span>
+                        <span class="text-slate-400 text-xs italic">Research Draft</span>
                     </div>
-                    <div class="border-t border-slate-100 pt-6 mt-4 flex items-center justify-between">
-                        <span class="text-xs font-semibold text-blue-900">Highlights: ITC, MD, NMR</span>
-                        <a href="#" class="text-blue-600 text-sm font-bold hover:underline">Approfondisci →</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-start mb-6">
-                            <span class="bg-indigo-100 text-indigo-700 text-[10px] font-bold px-2 py-1 rounded uppercase">Immuno-Oncology</span>
-                            <span class="text-slate-400 text-xs italic">Published 2025</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4 text-slate-800 leading-tight">Evasione Immunitaria: Siglec-7 & Glycan Mimicry</h3>
-                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
-                            Studio molecolare dell'interazione tra il recettore inibitorio Siglec-7 e antigeni batterici (<em>F. nucleatum</em>, <em>N. meningitidis</em>). Analisi dell'impatto della flessibilità dei ligandi gangliosidici.
-                        </p>
-                    </div>
-                    <div class="border-t border-slate-100 pt-6 mt-4 flex items-center justify-between">
-                        <span class="text-xs font-semibold text-blue-900">Journal: JACS Au / Adv. Science</span>
-                        <a href="#pubblicazioni" class="text-blue-600 text-sm font-bold hover:underline">Vedi Paper →</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="pubblicazioni" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl mb-12">Pubblicazioni Selezionate</h2>
-            <div class="space-y-8">
-                
-                <div class="border-l-4 border-blue-900 pl-6 py-2">
-                    <p class="text-xs font-bold text-blue-600 uppercase mb-1">JACS Au (2025)</p>
-                    <h4 class="text-lg font-bold mb-2 text-slate-800">Fusobacterium nucleatum LPS O-Antigen Defines a Novel Siglec-7 Binding Epitope</h4>
-                    <p class="text-sm text-slate-500 italic">Di Carluccio C., ..., Masi A.A., ..., Silipo A.*</p>
-                </div>
-
-                <div class="border-l-4 border-blue-900 pl-6 py-2">
-                    <p class="text-xs font-bold text-blue-600 uppercase mb-1">Advanced Science (2025)</p>
-                    <h4 class="text-lg font-bold mb-2 text-slate-800">Insights into Siglec-7 Binding to Gangliosides: NMR Protein Assignment and the Impact of Ligand Flexibility</h4>
-                    <p class="text-sm text-slate-500 italic">Di Carluccio C., ..., Masi A.A., ..., Silipo A.*</p>
-                </div>
-
-                <div class="border-l-4 border-blue-900 pl-6 py-2">
-                    <p class="text-xs font-bold text-blue-600 uppercase mb-1">JACS Au (2025)</p>
-                    <h4 class="text-lg font-bold mb-2 text-slate-800">Molecular Basis of Siglec-7 Recognition by Neisseria meningitidis Serogroup Y CPS</h4>
-                    <p class="text-sm text-slate-500 italic">Di Carluccio C., ..., Masi A.A., ..., Silipo A.*</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <footer id="contatti" class="bg-slate-900 text-white py-16 px-6">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-            <div>
-                <h2 class="text-3xl font-bold mb-6">Lavoriamo insieme</h2>
-                <p class="text-slate-400 mb-8 leading-relaxed">
-                    Aperto a collaborazioni nel settore Drug Discovery, R&D farmaceutico e Structural Biology. 
-                    Puoi trovarmi a Milano o contattarmi via email/LinkedIn.
-                </p>
-                <div class="space-y-4 text-sm">
-                    <p class="flex items-center gap-3"><span class="text-blue-400">Email:</span> alessandroantoniomasi69@gmail.com</p>
-                    <p class="flex items-center gap-3"><span class="text-blue-400">LinkedIn:</span> linkedin.com/in/alessandro-masi-biologist</p>
-                    <p class="flex items-center gap-3"><span class="text-blue-400">ORCID:</span> 0000-0001-5932-7794</p>
+                    <h3 class="text-2xl font-bold mb-4">Neisseria gonorrhoeae: Il Mimitopo Tetra-1</h3>
+                    <p class="text-slate-600 text-sm mb-6">Analisi strutturale dell'anticorpo monoclonale 2C7 per lo sviluppo di nuove terapie anti-gonococciche.</p>
+                    <button onclick="openModal('modal-2c7')" class="text-blue-600 font-bold text-sm flex items-center hover:gap-2 transition-all">
+                        APPROFONDISCI IL CASE STUDY <span class="ml-2">→</span>
+                    </button>
                 </div>
             </div>
-            <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700">
-                <h3 class="text-xl font-bold mb-4">Technical Stack</h3>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-slate-700 rounded text-xs">NMR (STD, HSQC)</span>
-                    <span class="px-3 py-1 bg-slate-700 rounded text-xs">Molecular Dynamics (MD)</span>
-                    <span class="px-3 py-1 bg-slate-700 rounded text-xs">Native Mass Spectrometry</span>
-                    <span class="px-3 py-1 bg-slate-700 rounded text-xs">ITC / Bioreactors</span>
-                    <span class="px-3 py-1 bg-slate-700 rounded text-xs">High-Throughput Screening</span>
-                    <span class="px-3 py-1 bg-slate-700 rounded text-xs">Python for Science</span>
+
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 flex flex-col">
+                <div class="h-48 bg-slate-200">
+                    <img src="siglec7_interaction.png" alt="Siglec-7 Interaction" class="w-full h-full object-cover">
+                </div>
+                <div class="p-8 flex-grow">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-indigo-100 text-indigo-700 text-[10px] font-bold px-2 py-1 rounded uppercase">Immuno-Oncology</span>
+                        <span class="text-slate-400 text-xs italic text-blue-600">Published</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Checkpoint Glico-Immuni: Siglec-7</h3>
+                    <p class="text-slate-600 text-sm mb-6">Meccanismi molecolari di evasione immunitaria mediati dal riconoscimento di sialoglicani batterici e tumorali.</p>
+                    <button onclick="openModal('modal-siglec')" class="text-blue-600 font-bold text-sm flex items-center hover:gap-2 transition-all">
+                        VEDI PUBBLICAZIONI E DATI <span class="ml-2">→</span>
+                    </button>
                 </div>
             </div>
-        </div>
-        <div class="max-w-6xl mx-auto border-t border-slate-800 mt-16 pt-8 text-center text-xs text-slate-500">
-            © 2026 Alessandro Antonio Masi — Scientific Portfolio. Built with Rigor & Design.
-        </div>
-    </footer>
 
-</body>
-</html>
+        </div>
+    </div>
+</section>
+
+<div id="modal-2c7" class="fixed inset-0 z-[100] hidden bg-slate-900/90 backdrop-blur-sm flex justify-center items-center p-4">
+    <div class="bg-white w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl">
+        <div class="sticky top-0 bg-white border-b p-6 flex justify-between items-center">
+            <h3 class="text-xl font-bold">Case Study: 2C7 & Tetra-1 Development</h3>
+            <button onclick="closeModal('modal-2c7')" class="text-slate-400 hover:text-slate-900 text-2xl">&times;</button>
+        </div>
+        <div class="p-8 lg:p-12">
+            <div class="grid lg:grid-cols-2 gap-12 mb-16">
+                <div>
+                    <h4 class="text-blue-900 font-bold uppercase text-xs tracking-widest mb-4">Il Problema Scientifico</h4>
+                    <p class="text-slate-700 leading-relaxed mb-4">
+                        <em>Neisseria gonorrhoeae</em> ha sviluppato resistenze multiallarme (AMR) e strategie di evasione immunitaria sofisticate tramite la variazione dei lipo-oligosaccaridi (LOS) di superficie. L'anticorpo 2C7 è protettivo, ma l'eterogeneità dei ceppi rende difficile la creazione di un vaccino universale.
+                    </p>
+                    <h4 class="text-blue-900 font-bold uppercase text-xs tracking-widest mb-4 mt-8">La Nostra Soluzione</h4>
+                    <p class="text-slate-700 leading-relaxed">
+                        Abbiamo identificato e caratterizzato <strong>Tetra-1</strong>, un oligosaccaride sintetico che agisce come mimitopo dell'epitopo 2C7. Attraverso un approccio integrato, abbiamo definito la base atomica della sua efficacia.
+                    </p>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                    <img src="2c7_atomic_model.png" alt="Modello Atomico" class="rounded-lg shadow-sm mb-2">
+                    <p class="text-[10px] text-slate-500 text-center uppercase">Fig 1. Modello 3D del complesso mAb 2C7-Tetra-1 ottenuto via MD</p>
+                </div>
+            </div>
+
+            <h4 class="text-center font-bold text-2xl mb-10">Highlight della Sperimentazione</h4>
+            <div class="grid md:grid-cols-3 gap-6 mb-12 text-center">
+                <div class="p-6 bg-blue-50 rounded-2xl">
+                    <div class="text-blue-600 font-bold text-lg mb-2">STD-NMR</div>
+                    <p class="text-xs text-slate-600">Epitope mapping ad alta risoluzione dei residui del Tetra-1 in contatto diretto con l'anticorpo.</p>
+                </div>
+                <div class="p-6 bg-blue-50 rounded-2xl">
+                    <div class="text-blue-600 font-bold text-lg mb-2">ITC Analysis</div>
+                    <p class="text-xs text-slate-600">Binding spontaneo guidato dall'entalpia con una <strong>K<sub>D</sub> di 2 μM</strong>.</p>
+                </div>
+                <div class="p-6 bg-blue-50 rounded-2xl">
+                    <div class="text-blue-600 font-bold text-lg mb-2">MD Simulations</div>
+                    <p class="text-xs text-slate-600">Stabilità dei legami idrogeno validata (Asn57, Trp125) con persistenza >40%.</p>
+                </div>
+            </div>
+
+            
+            <div class="grid grid-cols-2 gap-4">
+                <img src="nmr_spectra.png" class="rounded-lg border">
+                <img src="itc_curve.png" class="rounded-lg border">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openModal(id) {
+        document.getElementById(id).classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Blocca lo scroll
+    }
+    function closeModal(id) {
+        document.getElementById(id).classList.add('hidden');
+        document.body.style.overflow = 'auto'; // Riattiva lo scroll
+    }
+</script>
