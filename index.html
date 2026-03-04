@@ -1,40 +1,37 @@
-<section id="progetti" class="py-20 bg-slate-100">
+<section id="progetti" class="py-20 bg-slate-50">
     <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl mb-4">Ricerca & Sviluppo</h2>
-        <p class="text-slate-600 mb-12 max-w-2xl">Focus sulla Drug Discovery e la caratterizzazione biofisica di complessi proteina-ligando.</p>
+        <h2 class="text-4xl font-bold mb-12 text-blue-900 border-b-2 border-blue-100 pb-4">Selected Research Projects</h2>
         
-        <div class="grid md:grid-cols-2 gap-8">
+        <div class="grid md:grid-cols-2 gap-10">
             
-            <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 flex flex-col">
-                <div class="h-48 bg-slate-200">
-                    <img src="graphical_abstract_2c7.png" alt="2C7 Epitope Mapping" class="w-full h-full object-cover">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 flex flex-col hover:scale-[1.02] transition-transform duration-300">
+                <div class="h-64 bg-slate-200 relative">
+                    <img src="graphical_abstract_2c7.png" alt="2C7 Research" class="w-full h-full object-cover">
+                    <div class="absolute top-4 left-4 bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Vaccine Design</div>
                 </div>
-                <div class="p-8 flex-grow">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-1 rounded uppercase">Vaccine Design</span>
-                        <span class="text-slate-400 text-xs italic">Research Draft</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Neisseria gonorrhoeae: Il Mimitopo Tetra-1</h3>
-                    <p class="text-slate-600 text-sm mb-6">Analisi strutturale dell'anticorpo monoclonale 2C7 per lo sviluppo di nuove terapie anti-gonococciche.</p>
-                    <button onclick="openModal('modal-2c7')" class="text-blue-600 font-bold text-sm flex items-center hover:gap-2 transition-all">
-                        APPROFONDISCI IL CASE STUDY <span class="ml-2">→</span>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4 tracking-tight leading-snug">Targeting N. gonorrhoeae: Deciphering the 2C7 Epitope</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Studio dell'interazione tra l'anticorpo 2C7 e il mimitopo sintetico <strong>Tetra-1</strong>. Caratterizzazione atomistica per il superamento della resistenza antibiotica (AMR).
+                    </p>
+                    <button onclick="toggleModal('modal-neisseria')" class="w-full py-3 bg-blue-900 text-white rounded-xl font-bold text-sm hover:bg-blue-800 transition shadow-lg shadow-blue-200">
+                        APRI CASE STUDY DETTAGLIATO
                     </button>
                 </div>
             </div>
 
-            <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 flex flex-col">
-                <div class="h-48 bg-slate-200">
-                    <img src="siglec7_interaction.png" alt="Siglec-7 Interaction" class="w-full h-full object-cover">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 flex flex-col hover:scale-[1.02] transition-transform duration-300">
+                <div class="h-64 bg-slate-200 relative">
+                    <img src="siglec7_research.png" alt="Siglec-7 Research" class="w-full h-full object-cover">
+                    <div class="absolute top-4 left-4 bg-indigo-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Immuno-Oncology</div>
                 </div>
-                <div class="p-8 flex-grow">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="bg-indigo-100 text-indigo-700 text-[10px] font-bold px-2 py-1 rounded uppercase">Immuno-Oncology</span>
-                        <span class="text-slate-400 text-xs italic text-blue-600">Published</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Checkpoint Glico-Immuni: Siglec-7</h3>
-                    <p class="text-slate-600 text-sm mb-6">Meccanismi molecolari di evasione immunitaria mediati dal riconoscimento di sialoglicani batterici e tumorali.</p>
-                    <button onclick="openModal('modal-siglec')" class="text-blue-600 font-bold text-sm flex items-center hover:gap-2 transition-all">
-                        VEDI PUBBLICAZIONI E DATI <span class="ml-2">→</span>
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4 tracking-tight leading-snug">Siglec-7: Molecular Basis of Immune Evasion</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Analisi NMR e computazionale del riconoscimento di sialoglicani da parte di recettori inibitori in contesti patogeni e tumorali.
+                    </p>
+                    <button onclick="toggleModal('modal-siglec')" class="w-full py-3 bg-indigo-900 text-white rounded-xl font-bold text-sm hover:bg-indigo-800 transition shadow-lg shadow-indigo-200">
+                        VEDI PUBBLICAZIONI
                     </button>
                 </div>
             </div>
@@ -43,62 +40,82 @@
     </div>
 </section>
 
-<div id="modal-2c7" class="fixed inset-0 z-[100] hidden bg-slate-900/90 backdrop-blur-sm flex justify-center items-center p-4">
-    <div class="bg-white w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl">
-        <div class="sticky top-0 bg-white border-b p-6 flex justify-between items-center">
-            <h3 class="text-xl font-bold">Case Study: 2C7 & Tetra-1 Development</h3>
-            <button onclick="closeModal('modal-2c7')" class="text-slate-400 hover:text-slate-900 text-2xl">&times;</button>
+<div id="modal-neisseria" class="fixed inset-0 z-[100] hidden bg-slate-900/95 flex justify-center items-center p-4 backdrop-blur-md">
+    <div class="bg-white w-full max-w-6xl max-h-[92vh] overflow-y-auto rounded-[2.5rem] shadow-2xl relative">
+        
+        <div class="sticky top-0 bg-white/80 backdrop-blur-md px-10 py-6 border-b flex justify-between items-center z-10">
+            <div>
+                <h3 class="text-2xl font-bold text-blue-900 leading-tight">Case Study: 2C7 & Tetra-1 Development</h3>
+                <p class="text-xs font-medium text-slate-400 uppercase tracking-widest mt-1">Structural Biology & Vaccine Design</p>
+            </div>
+            <button onclick="toggleModal('modal-neisseria')" class="w-12 h-12 flex items-center justify-center rounded-full bg-slate-100 text-slate-500 hover:bg-red-50 hover:text-red-600 transition text-2xl font-bold">&times;</button>
         </div>
-        <div class="p-8 lg:p-12">
-            <div class="grid lg:grid-cols-2 gap-12 mb-16">
+
+        <div class="p-10 lg:p-16">
+            <div class="grid lg:grid-cols-2 gap-16 mb-20">
                 <div>
-                    <h4 class="text-blue-900 font-bold uppercase text-xs tracking-widest mb-4">Il Problema Scientifico</h4>
-                    <p class="text-slate-700 leading-relaxed mb-4">
-                        <em>Neisseria gonorrhoeae</em> ha sviluppato resistenze multiallarme (AMR) e strategie di evasione immunitaria sofisticate tramite la variazione dei lipo-oligosaccaridi (LOS) di superficie. L'anticorpo 2C7 è protettivo, ma l'eterogeneità dei ceppi rende difficile la creazione di un vaccino universale.
+                    <h4 class="text-blue-600 font-bold uppercase text-xs tracking-widest mb-4">Scientific Background</h4>
+                    <p class="text-slate-700 leading-relaxed text-lg mb-6 italic">
+                        "La resistenza antibiotica (AMR) in Neisseria gonorrhoeae richiede nuove strategie immunoterapeutiche."
                     </p>
-                    <h4 class="text-blue-900 font-bold uppercase text-xs tracking-widest mb-4 mt-8">La Nostra Soluzione</h4>
-                    <p class="text-slate-700 leading-relaxed">
-                        Abbiamo identificato e caratterizzato <strong>Tetra-1</strong>, un oligosaccaride sintetico che agisce come mimitopo dell'epitopo 2C7. Attraverso un approccio integrato, abbiamo definito la base atomica della sua efficacia.
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        L'evasione immunitaria del gonococco è mediata dalla variazione dei lipo-oligosaccaridi (LOS). L'anticorpo monoclonale <strong>2C7</strong> è un target terapeutico d'elezione, ma la sua interazione molecolare necessitava di una mappatura ad alta risoluzione.
+                    </p>
+                    <h4 class="text-blue-600 font-bold uppercase text-xs tracking-widest mb-4">The Proposal</h4>
+                    <p class="text-slate-600 leading-relaxed">
+                        Sviluppo di <strong>Tetra-1</strong>, un oligosaccaride sintetico progettato come mimitopo vaccinale. Abbiamo utilizzato un workflow ibrido (NMR + MD) per validare la stabilità del complesso e la sua capacità di mimare l'antigene naturale.
                     </p>
                 </div>
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                    <img src="2c7_atomic_model.png" alt="Modello Atomico" class="rounded-lg shadow-sm mb-2">
-                    <p class="text-[10px] text-slate-500 text-center uppercase">Fig 1. Modello 3D del complesso mAb 2C7-Tetra-1 ottenuto via MD</p>
+                <div class="space-y-6">
+                    <div class="bg-slate-50 p-6 rounded-3xl border border-slate-100">
+                        <img src="itc_data.png" alt="ITC Data" class="w-full rounded-2xl shadow-sm mb-4">
+                        <p class="text-[11px] text-slate-400 font-medium uppercase text-center">Fig 1. Isothermal Titration Calorimetry (ITC): Binding Spontaneo, K<sub>D</sub> ≈ 2 μM</p>
+                    </div>
                 </div>
             </div>
 
-            <h4 class="text-center font-bold text-2xl mb-10">Highlight della Sperimentazione</h4>
-            <div class="grid md:grid-cols-3 gap-6 mb-12 text-center">
-                <div class="p-6 bg-blue-50 rounded-2xl">
-                    <div class="text-blue-600 font-bold text-lg mb-2">STD-NMR</div>
-                    <p class="text-xs text-slate-600">Epitope mapping ad alta risoluzione dei residui del Tetra-1 in contatto diretto con l'anticorpo.</p>
+            <div class="grid md:grid-cols-3 gap-8 mb-20">
+                <div class="bg-blue-50/50 p-8 rounded-[2rem] border border-blue-100 text-center">
+                    <div class="text-blue-700 text-3xl font-bold mb-2">STD-NMR</div>
+                    <p class="text-sm text-slate-600">Mapping dell'epitope a livello atomico: identificazione dei protoni del Tetra-1 in contatto con il Fab 2C7.</p>
                 </div>
-                <div class="p-6 bg-blue-50 rounded-2xl">
-                    <div class="text-blue-600 font-bold text-lg mb-2">ITC Analysis</div>
-                    <p class="text-xs text-slate-600">Binding spontaneo guidato dall'entalpia con una <strong>K<sub>D</sub> di 2 μM</strong>.</p>
+                <div class="bg-blue-50/50 p-8 rounded-[2rem] border border-blue-100 text-center">
+                    <div class="text-blue-700 text-3xl font-bold mb-2">Molecular Dyn.</div>
+                    <p class="text-sm text-slate-600">Simulazioni MD di 1μs per confermare la persistenza dei legami H (Asn57, Trp125).</p>
                 </div>
-                <div class="p-6 bg-blue-50 rounded-2xl">
-                    <div class="text-blue-600 font-bold text-lg mb-2">MD Simulations</div>
-                    <p class="text-xs text-slate-600">Stabilità dei legami idrogeno validata (Asn57, Trp125) con persistenza >40%.</p>
+                <div class="bg-blue-50/50 p-8 rounded-[2rem] border border-blue-100 text-center">
+                    <div class="text-blue-700 text-3xl font-bold mb-2">Native MS</div>
+                    <p class="text-sm text-slate-600">Validazione della stechiometria del complesso 1:2 ligando-proteina ad alto rendimento.</p>
                 </div>
             </div>
 
-            
-            <div class="grid grid-cols-2 gap-4">
-                <img src="nmr_spectra.png" class="rounded-lg border">
-                <img src="itc_curve.png" class="rounded-lg border">
+            <div class="bg-slate-900 rounded-[3rem] p-10 text-white overflow-hidden relative">
+                <h4 class="text-xl font-bold mb-6">Structural Insight: Binding Interface</h4>
+                <div class="grid lg:grid-cols-2 gap-10 items-center">
+                    <img src="molecular_model_3d.png" alt="3D Model" class="rounded-2xl shadow-2xl border border-white/10">
+                    <div class="space-y-4 text-slate-300 text-sm">
+                        <p>L'integrazione dei dati sperimentali NMR con le simulazioni computazionali ha rivelato:</p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>Forte interazione guidata dall'entalpia ($\Delta H = -43.3 kJ/mol$).</li>
+                            <li>Ruolo chiave della catena pesante (VH) nella stabilizzazione del mimitopo.</li>
+                            <li>Ottima correlazione tra dati calcolati e osservazioni sperimentali.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 <script>
-    function openModal(id) {
-        document.getElementById(id).classList.remove('hidden');
-        document.body.style.overflow = 'hidden'; // Blocca lo scroll
-    }
-    function closeModal(id) {
-        document.getElementById(id).classList.add('hidden');
-        document.body.style.overflow = 'auto'; // Riattiva lo scroll
+    function toggleModal(id) {
+        const modal = document.getElementById(id);
+        modal.classList.toggle('hidden');
+        // Previene lo scroll della pagina sotto la modal
+        if (!modal.classList.contains('hidden')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
     }
 </script>
