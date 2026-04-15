@@ -34,27 +34,34 @@
             <p class="gold-accent font-extrabold uppercase tracking-[0.15em] text-[10px] mb-8 italic">Pharmaceutical Sales Representative</p>
             
             <div class="space-y-3 w-full px-2">
-                <a href="tel:+393271159384" class="w-full navy-bg text-white py-4 rounded-2xl font-bold text-sm shadow-lg flex items-center justify-center gap-3">
+                <a href="tel:+393271159384" class="w-full navy-bg text-white py-4 rounded-2xl font-bold text-sm shadow-lg flex items-center justify-center gap-3 active:scale-95 transition-transform">
                     <span>📞</span> +39 327 115 9384
                 </a>
-                <a href="mailto:alessandroantoniomasi69@gmail.com" class="w-full bg-white border border-slate-200 navy-text py-4 rounded-2xl font-bold text-sm shadow-sm flex items-center justify-center gap-3">
+                <a href="mailto:alessandroantoniomasi69@gmail.com" class="w-full bg-white border border-slate-200 navy-text py-4 rounded-2xl font-bold text-sm shadow-sm flex items-center justify-center gap-3 active:scale-95 transition-transform">
                     <span>✉️</span> Scrivi Email
                 </a>
             </div>
         </section>
 
         <section class="grid grid-cols-2 gap-4 w-full">
-            <div class="glass-card p-6 shadow-md text-center border-b-4 border-slate-100" data-aos="zoom-in-right">
+            <div class="glass-card p-6 shadow-md text-center border-b-4 border-slate-100 cursor-pointer active:scale-95 transition-all" 
+                 onclick="toggleModal('modal-research', true)" data-aos="zoom-in-right">
                 <div class="text-2xl mb-2">🔬</div>
                 <h3 class="font-bold text-[11px] navy-text uppercase tracking-tighter">Research</h3>
-                <p class="text-[9px] text-slate-400 mt-1 uppercase">Computational Biochem</p>
+                <p class="text-[9px] text-slate-500 mt-2 leading-relaxed uppercase">
+                    ISPSO Genève • Drug Discovery <br>
+                    <span class="gold-accent font-bold">Integrazione Wet & Dry Lab ↗</span>
+                </p>
             </div>
 
             <div class="glass-card p-6 shadow-md text-center border-b-4 gold-border cursor-pointer active:scale-95 transition-all" 
-                 onclick="toggleModal('modal-aicro', true)" data-aos="zoom-in-left">
-                <div class="text-2xl mb-2">📜</div>
+                 onclick="toggleModal('modal-analysis', true)" data-aos="zoom-in-left">
+                <div class="text-2xl mb-2">📊</div>
                 <h3 class="font-bold text-[11px] navy-text uppercase tracking-tighter">Analysis</h3>
-                <p class="text-[9px] gold-accent font-black mt-1 animate-pulse">AICRO EXPERT ↗</p>
+                <p class="text-[9px] gold-accent font-black mt-2 animate-pulse uppercase">
+                    AICRO Expert • ICH-GCP <br>
+                    Data Integrity Compliance ↗
+                </p>
             </div>
         </section>
 
@@ -70,7 +77,7 @@
         </section>
 
         <section class="glass-card p-8 shadow-xl text-center" data-aos="fade-up">
-            <h2 class="text-xl font-bold mb-6 italic navy-text tracking-tight text-center">Scientific Authority</h2>
+            <h2 class="text-xl font-bold mb-6 italic navy-text tracking-tight">Scientific Authority</h2>
             <div class="space-y-3 text-left">
                 <div class="p-4 bg-white/60 rounded-2xl border border-white">
                     <span class="text-[8px] font-black text-blue-600 uppercase tracking-widest">Advanced Science</span>
@@ -82,7 +89,7 @@
                 </div>
             </div>
             <div class="text-center mt-6">
-                <a href="https://orcid.org/0000-0001-5932-7794" target="_blank" class="text-[9px] font-black uppercase text-slate-400 hover:text-blue-600 transition tracking-[0.2em]">ORCID DATABASE ↗</a>
+                <a href="https://orcid.org/0000-0001-5932-7794" target="_blank" class="text-[9px] font-black uppercase text-slate-400 hover:text-blue-600 transition tracking-[0.2em]">ORCID RECORD ↗</a>
             </div>
         </section>
 
@@ -93,17 +100,35 @@
 
     </main>
 
-    <div id="modal-aicro" class="fixed inset-0 z-[100] hidden items-center justify-center p-6">
-        <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm" onclick="toggleModal('modal-aicro', false)"></div>
+    <div id="modal-research" class="fixed inset-0 z-[100] hidden items-center justify-center p-6">
+        <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm" onclick="toggleModal('modal-research', false)"></div>
         <div class="glass-card bg-white w-full max-w-sm p-8 shadow-2xl relative">
-            <button onclick="toggleModal('modal-aicro', false)" class="absolute top-5 right-5 text-slate-300 text-3xl">&times;</button>
-            <div class="flex items-center gap-4 mb-8">
-                <div class="gold-bg p-3 rounded-2xl text-white text-xl shadow-lg">🎓</div>
-                <h3 class="text-xl font-bold navy-text italic leading-tight">Expertise AICRO</h3>
+            <button onclick="toggleModal('modal-research', false)" class="absolute top-5 right-5 text-slate-300 text-3xl">&times;</button>
+            <div class="flex items-center gap-4 mb-6">
+                <div class="gold-bg p-3 rounded-2xl text-white text-xl shadow-lg">🔬</div>
+                <h3 class="text-xl font-bold navy-text italic">R&D & Soft Skills</h3>
             </div>
-            <ul class="space-y-5 text-[13px] text-slate-700">
-                <li class="flex items-start gap-3"><span class="gold-accent font-bold">•</span><span><strong>Clinical Trial Design:</strong> Comprensione avanzata delle fasi sperimentali.</span></li>
-                <li class="flex items-start gap-3"><span class="gold-accent font-bold">•</span><span><strong>GCP Compliance:</strong> Operatività secondo standard internazionali di ricerca.</span></li>
+            <div class="space-y-4 text-[12px] text-slate-700 leading-relaxed">
+                <p><strong>International Exposure:</strong> Ottimizzazione flussi di lavoro presso l'ISPSO di Ginevra (riduzione tempi di analisi del 60%).</p>
+                <p><strong>Concrete PhD Actions:</strong> Integrazione di Native MS, NMR e simulazioni molecolari per lo screening ad alto throughput (21 sistemi proteina-ligando in 30 giorni).</p>
+                <p><strong>Core Soft Skills:</strong> Laboratory Management e leadership di gruppi multidisciplinari internazionali. Problem solving avanzato applicato a pipeline R&D complesse.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-analysis" class="fixed inset-0 z-[100] hidden items-center justify-center p-6">
+        <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm" onclick="toggleModal('modal-analysis', false)"></div>
+        <div class="glass-card bg-white w-full max-w-sm p-8 shadow-2xl relative">
+            <button onclick="toggleModal('modal-analysis', false)" class="absolute top-5 right-5 text-slate-300 text-3xl">&times;</button>
+            <div class="flex items-center gap-4 mb-6">
+                <div class="gold-bg p-3 rounded-2xl text-white text-xl shadow-lg">📊</div>
+                <h3 class="text-xl font-bold navy-text italic">Clinical & Data Expertise</h3>
+            </div>
+            <ul class="space-y-4 text-[12px] text-slate-700">
+                <li class="flex items-start gap-2"><span>•</span><span><strong>AICRO & GCP:</strong> Gestione end-to-end del farmaco sperimentale e dei dispositivi medici (GMP/IMPD).</span></li>
+                <li class="flex items-start gap-2"><span>•</span><span><strong>Regulatory Compliance:</strong> Padronanza del Regolamento UE 536/2014 e ICH-GCP.</span></li>
+                <li class="flex items-start gap-2"><span>•</span><span><span><strong>Clinical Operations:</strong> Competenza operativa dal feasibility-to-close-out e risk management proattivo nei centri.</span></span></li>
+                <li class="flex items-start gap-2"><span>•</span><span><strong>Data Integrity:</strong> Specializzazione nell'analisi di dataset complessi (High-Resolution MS).</span></li>
             </ul>
         </div>
     </div>
