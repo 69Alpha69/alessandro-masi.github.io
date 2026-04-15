@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alessandro Antonio Masi | Scientific Portfolio</title>
+    <title>Alessandro Antonio Masi | R&D Scientist</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         h1, h2, h3, h4 { font-family: 'Merriweather', serif; }
-        .modal-active { overflow: hidden; }
         .gradient-blue { background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%); }
-        .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3); }
-        .conf-card, .pub-card { border-left: 4px solid transparent; transition: all 0.3s ease; }
-        .conf-card:hover, .pub-card:hover { border-left-color: #2563eb; transform: translateX(8px); background-color: #f8fafc; }
+        .pub-card { border-left: 4px solid transparent; transition: all 0.3s ease; }
+        .pub-card:hover { border-left-color: #2563eb; transform: translateX(8px); background-color: #f8fafc; }
+        .image-mask { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; overflow: hidden; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
     <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 py-3">
-        <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
             <span class="font-extrabold tracking-tighter text-xl text-blue-900">A.A. MASI</span>
-            <div class="flex space-x-6 text-[10px] font-black uppercase tracking-widest">
+            <div class="hidden md:flex space-x-6 text-[10px] font-black uppercase tracking-widest">
+                <a href="#vision" class="hover:text-blue-600">Vision</a>
                 <a href="#progetti" class="hover:text-blue-600">Ricerca</a>
                 <a href="#pubblicazioni" class="hover:text-blue-600">Pubblicazioni</a>
                 <a href="#contatti" class="text-blue-700 underline decoration-2 underline-offset-4">Contatto</a>
@@ -29,131 +29,119 @@
         </div>
     </nav>
 
-    <header id="about" class="max-w-5xl mx-auto px-6 py-16 lg:py-24 text-center lg:text-left">
-        <div class="grid lg:grid-cols-3 gap-12 items-center">
-            <div class="lg:col-span-2">
-                <span class="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-[10px] font-black uppercase tracking-widest mb-6">R&D Scientist | Computational Biochemist</span>
-                <h1 class="text-4xl lg:text-6xl mb-6 leading-tight text-slate-900 font-bold">
-                    Decifrare il Riconoscimento Molecolare con <span class="text-blue-600 italic">Precisione Atomica.</span>
+    <header class="max-w-6xl mx-auto px-6 py-16 lg:py-24">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="order-2 lg:order-1">
+                <span class="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-[10px] font-black uppercase tracking-widest mb-6 italic">Professional Profile</span>
+                <h1 class="text-5xl lg:text-7xl mb-8 leading-[1.1] text-slate-900 font-bold">
+                    Alessandro Antonio <span class="text-blue-600">Masi</span>
                 </h1>
-                <p class="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                    Specializzato nella caratterizzazione strutturale proteina-ligando. Integro <strong>Biofisica Sperimentale</strong> e <strong>Simulazioni Computazionali</strong> per accelerare il design di vaccini e checkpoint inhibitors.
+                <p class="text-xl text-slate-600 mb-10 leading-relaxed font-light">
+                    R&D Scientist specializzato nell'integrazione di <strong>Biofisica Sperimentale</strong> e <strong>Biochimica Computazionale</strong> per l'innovazione biotecnologica.
                 </p>
-                
-                <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
-                    <a href="mailto:alessandroantoniomasi69@gmail.com" class="gradient-blue text-white px-8 py-4 rounded-2xl font-bold shadow-xl shadow-blue-200 hover:scale-105 transition flex items-center">
-                        📧 Scrivimi
-                    </a>
-                    <a href="https://linkedin.com/in/alessandro-masi-biologist" target="_blank" class="bg-white border border-slate-200 px-8 py-4 rounded-2xl font-bold hover:bg-slate-50 transition flex items-center">
-                        LinkedIn
-                    </a>
-                    <a href="https://orcid.org/0000-0001-5932-7794" target="_blank" class="bg-slate-100 border border-slate-200 px-8 py-4 rounded-2xl font-bold hover:bg-slate-200 transition text-sm">
-                        ORCID
-                    </a>
+                <div class="flex flex-wrap gap-4">
+                    <a href="mailto:alessandroantoniomasi69@gmail.com" class="gradient-blue text-white px-8 py-4 rounded-2xl font-bold shadow-xl hover:scale-105 transition flex items-center">📧 Scrivimi</a>
+                    <a href="https://linkedin.com/in/alessandro-masi-biologist" target="_blank" class="bg-white border border-slate-200 px-8 py-4 rounded-2xl font-bold hover:bg-slate-50 transition">LinkedIn</a>
                 </div>
             </div>
-            
-            <div class="bg-white p-8 rounded-[3rem] shadow-2xl border border-slate-100">
-                <h3 class="text-xs font-black uppercase tracking-widest text-blue-600 mb-6">Expertise Stack</h3>
-                <ul class="space-y-4 text-sm font-medium">
-                    <li class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span> Molecular Dynamics (Amber/Gromacs)</li>
-                    <li class="flex items-center"><span class="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span> Biomolecular NMR</li>
-                    <li class="flex items-center"><span class="w-2 h-2 bg-cyan-500 rounded-full mr-3"></span> Python for Data Science</li>
-                    <li class="flex items-center"><span class="w-2 h-2 bg-slate-500 rounded-full mr-3"></span> Protein Engineering & ÄKTA</li>
-                    <li class="flex items-center"><span class="w-2 h-2 bg-blue-800 rounded-full mr-3"></span> Structural Glycobiology</li>
-                </ul>
+            <div class="order-1 lg:order-2 flex justify-center">
+                <div class="relative w-72 h-72 lg:w-96 lg:h-96">
+                    <div class="absolute inset-0 gradient-blue opacity-10 image-mask transform rotate-6"></div>
+                    <div class="image-mask w-full h-full border-8 border-white shadow-2xl relative z-10">
+                        <img src="tua_foto_professionale.jpg" alt="Alessandro Antonio Masi" class="w-full h-full object-cover">
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
-    <div class="bg-slate-900 py-10">
-        <div class="max-w-5xl mx-auto px-6 overflow-hidden">
-            <p class="text-[10px] font-black uppercase tracking-[0.3em] text-slate-500 mb-6 text-center">Featured in Peer-Reviewed Journals</p>
-            <div class="flex flex-wrap justify-center gap-8 lg:gap-16 opacity-70 grayscale hover:grayscale-0 transition duration-500">
-                <span class="text-white font-bold text-xl">JACS Au</span>
-                <span class="text-white font-bold text-xl">Advanced Science</span>
-                <span class="text-white font-bold text-xl">EuroCarb</span>
-                <span class="text-white font-bold text-xl">Wiley Online Library</span>
-            </div>
-        </div>
-    </div>
-
-    <section id="progetti" class="py-24 bg-white">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="mb-16">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4 italic">Core Research Projects</h2>
-                <div class="h-1.5 w-16 bg-blue-600 rounded-full"></div>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="group cursor-pointer" onclick="openModal('modal-neisseria')">
-                    <div class="rounded-[2.5rem] overflow-hidden mb-6 relative shadow-lg group-hover:shadow-2xl transition-all border border-slate-100">
-                        <img src="graphical_abstract_2c7.png" alt="2C7 Epitope" class="w-full h-72 object-cover group-hover:scale-105 transition duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-transparent to-transparent"></div>
-                        <div class="absolute bottom-6 left-6 text-white font-bold text-xl">
-                            Targeting N. gonorrhoeae
-                        </div>
+    <section id="vision" class="py-24 bg-slate-900 text-white overflow-hidden relative">
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-xs font-black uppercase tracking-[0.3em] text-blue-400 mb-6">Current Engagement</h2>
+                    <div class="mb-8">
+                        <img src="https://www.tecmed.it/wp-content/themes/tecmed/img/logo.png" alt="Tecmed Logo" class="h-12 brightness-0 invert opacity-80 mb-6">
+                        <h3 class="text-3xl font-bold mb-6 italic">Driving Innovation at Tecmed</h3>
+                        <p class="text-slate-400 leading-relaxed mb-6">
+                            In <a href="https://www.tecmed.it/" target="_blank" class="text-white underline decoration-blue-500 hover:text-blue-400 transition">Tecmed</a>, contribuisco a definire nuovi standard tecnologici nel settore medicale e della ricerca.
+                        </p>
                     </div>
-                    <div class="px-2">
-                        <p class="text-slate-500 text-sm mb-4 line-clamp-2">Workflow ibrido NMR/MD per lo sviluppo di mimitopi vaccinali (Tetra-1).</p>
-                        <span class="text-blue-700 font-black text-[10px] uppercase tracking-widest">Vedi Risultati Tecnici →</span>
+                    <div class="bg-white/5 p-8 rounded-3xl border border-white/10 backdrop-blur-sm">
+                        <h4 class="text-blue-400 font-bold mb-4 uppercase text-xs tracking-widest">La mia Vision</h4>
+                        <p class="text-lg italic leading-relaxed">
+                            "Credo che il futuro della medicina risieda nella capacità di tradurre la complessità molecolare in soluzioni cliniche concrete. In Tecmed, lavoriamo per accorciare la distanza tra la ricerca biofisica di frontiera e l'applicazione industriale, garantendo precisione e affidabilità."
+                        </p>
                     </div>
                 </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10 text-center">
+                        <span class="block text-3xl font-bold text-blue-400 mb-2">R&D</span>
+                        <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Design & Development</p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10 text-center">
+                        <span class="block text-3xl font-bold text-blue-400 mb-2">Quality</span>
+                        <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Standard Excellence</p>
+                    </div>
+                    <div class="col-span-2 bg-gradient-to-r from-blue-600 to-indigo-600 p-8 rounded-2xl shadow-2xl">
+                        <p class="text-sm font-medium">L'unione tra rigore scientifico accademico e velocità d'esecuzione industriale.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="group cursor-pointer" onclick="openModal('modal-siglec')">
+    <section id="progetti" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6 text-center lg:text-left">
+            <h2 class="text-3xl font-bold mb-16 italic">Scientific Expertise</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="group cursor-pointer">
                     <div class="rounded-[2.5rem] overflow-hidden mb-6 relative shadow-lg group-hover:shadow-2xl transition-all border border-slate-100">
-                        <img src="siglec7_interaction_structure.png" alt="Siglec-7 Interaction" class="w-full h-72 object-cover group-hover:scale-105 transition duration-700">
+                        <img src="graphical_abstract_2c7.png" alt="2C7 Epitope" class="w-full h-80 object-cover group-hover:scale-105 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 text-white font-bold text-xl">Targeting N. gonorrhoeae</div>
+                    </div>
+                    <p class="text-slate-500 text-sm px-2">Sviluppo di mimitopi vaccinali tramite workflow ibrido NMR/MD.</p>
+                </div>
+                <div class="group cursor-pointer">
+                    <div class="rounded-[2.5rem] overflow-hidden mb-6 relative shadow-lg group-hover:shadow-2xl transition-all border border-slate-100">
+                        <img src="siglec7_interaction_structure.png" alt="Siglec-7 Interaction" class="w-full h-80 object-cover group-hover:scale-105 transition duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/90 via-transparent to-transparent"></div>
-                        <div class="absolute bottom-6 left-6 text-white font-bold text-xl">
-                            Siglec-7 & Immuno-Oncology
-                        </div>
+                        <div class="absolute bottom-6 left-6 text-white font-bold text-xl">Siglec-7 & Immuno-Oncology</div>
                     </div>
-                    <div class="px-2">
-                        <p class="text-slate-500 text-sm mb-4 line-clamp-2">Studio atomistico del "Glycan Checkpoint" per contrastare l'evasione immunitaria.</p>
-                        <span class="text-indigo-700 font-black text-[10px] uppercase tracking-widest">Esplora Meccanismo →</span>
-                    </div>
+                    <p class="text-slate-500 text-sm px-2">Studio atomistico dell'evasione immunitaria tumorale e batterica.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="pubblicazioni" class="py-24 bg-slate-50">
-        <div class="max-w-5xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-slate-900 mb-12 italic text-center lg:text-left">Selected Publications (2025)</h2>
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 italic">Key Publications (2025)</h2>
             <div class="space-y-6">
-                <div class="pub-card bg-white p-6 rounded-3xl shadow-sm hover:shadow-md transition border border-slate-100">
-                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
-                        <div>
-                            <span class="bg-blue-900 text-white text-[9px] font-black px-3 py-1 rounded-full uppercase mb-2 inline-block">Advanced Science</span>
-                            <h4 class="text-lg font-bold text-slate-900 leading-tight">Insights into Siglec-7 Binding to Gangliosides: Impact of Ligand Flexibility</h4>
-                            <p class="text-xs text-slate-500 mt-2 italic">Di Carluccio C., ..., <strong>Masi A.A.</strong>, ..., Silipo A.*</p>
-                        </div>
-                        <a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202415782" target="_blank" class="text-blue-600 font-bold text-xs uppercase tracking-widest whitespace-nowrap">Doi ↗</a>
-                    </div>
+                <div class="pub-card bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
+                    <span class="bg-blue-900 text-white text-[9px] font-black px-3 py-1 rounded-full uppercase mb-2 inline-block">Advanced Science</span>
+                    <h4 class="text-lg font-bold text-slate-900">Insights into Siglec-7 Binding to Gangliosides: Impact of Ligand Flexibility</h4>
+                    <p class="text-xs text-slate-500 mt-2 italic">Di Carluccio C., ..., <strong>Masi A.A.</strong>, ..., Silipo A.*</p>
                 </div>
+                <div class="pub-card bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
+                    <span class="bg-blue-900 text-white text-[9px] font-black px-3 py-1 rounded-full uppercase mb-2 inline-block">JACS Au</span>
+                    <h4 class="text-lg font-bold text-slate-900">Fusobacterium nucleatum LPS Defines a Novel Siglec-7 Binding Epitope</h4>
+                    <p class="text-xs text-slate-500 mt-2 italic">Di Carluccio C., ..., <strong>Masi A.A.</strong>, ..., Silipo A.*</p>
                 </div>
+            </div>
         </div>
     </section>
 
-    <footer id="contatti" class="bg-white py-20 px-6 border-t border-slate-100">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8">Disponibile per collaborazioni di ricerca e consulenze R&D.</h2>
-            <a href="mailto:alessandroantoniomasi69@gmail.com" class="text-2xl font-light text-blue-600 border-b border-blue-200 hover:text-blue-800 transition">
-                alessandroantoniomasi69@gmail.com
-            </a>
-            <div class="flex justify-center gap-10 mt-12 font-black text-[10px] uppercase tracking-widest text-slate-400">
-                <a href="https://linkedin.com/in/alessandro-masi-biologist" class="hover:text-blue-600 transition">LinkedIn</a>
-                <a href="https://orcid.org/0000-0001-5932-7794" class="hover:text-blue-600 transition">ORCID</a>
-                <a href="#" class="hover:text-blue-600 transition">Scholar</a>
-            </div>
-            <p class="mt-20 text-[9px] text-slate-300 uppercase tracking-widest">© 2026 Alessandro Antonio Masi — Designed for Impact</p>
+    <footer id="contatti" class="bg-white py-24 px-6 border-t border-slate-100 text-center">
+        <h2 class="text-3xl font-bold mb-8 italic">Let's connect</h2>
+        <a href="mailto:alessandroantoniomasi69@gmail.com" class="text-2xl font-light text-blue-600 border-b border-blue-200 hover:text-blue-800 transition">alessandroantoniomasi69@gmail.com</a>
+        <div class="flex justify-center gap-10 mt-12 font-black text-[10px] uppercase tracking-widest text-slate-400">
+            <a href="https://linkedin.com/in/alessandro-masi-biologist" class="hover:text-blue-600 transition">LinkedIn</a>
+            <a href="https://orcid.org/0000-0001-5932-7794" class="hover:text-blue-600 transition">ORCID</a>
         </div>
+        <p class="mt-20 text-[9px] text-slate-300 uppercase tracking-widest">© 2026 Alessandro Antonio Masi | Tecmed R&D Scientist</p>
     </footer>
 
-    <script>
-        function openModal(id) { document.getElementById(id).classList.remove('hidden'); document.body.classList.add('modal-active'); }
-        function closeModal(id) { document.getElementById(id).classList.add('hidden'); document.body.classList.remove('modal-active'); }
-        window.onclick = function(e) { if (e.target.id.startsWith('modal-')) closeModal(e.target.id); }
-    </script>
 </body>
 </html>
