@@ -10,7 +10,6 @@
     <style>
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
-            /* Sfondo Panna/Crema */
             background: #FDFBF7; 
             overflow-x: hidden;
             display: flex;
@@ -18,12 +17,8 @@
             min-height: 100vh;
         }
         h1, h2 { font-family: 'Playfair Display', serif; }
-        
-        /* Blu Navy Professionale */
         .navy-bg { background-color: #0A192F; }
         .navy-text { color: #0A192F; }
-        
-        /* Oro Sofisticato */
         .gold-accent { color: #C5A059; }
         .gold-border { border-color: #C5A059; }
         .gold-bg { background-color: #C5A059; }
@@ -42,10 +37,7 @@
             50% { transform: translateY(-10px) rotate(3deg); }
         }
 
-        .cta-button {
-            transition: all 0.3s ease;
-            border: 1px solid rgba(197, 160, 89, 0.3);
-        }
+        .cta-button { transition: all 0.3s ease; }
         .cta-button:active { transform: scale(0.96); }
     </style>
 </head>
@@ -65,25 +57,30 @@
             
             <div class="space-y-3 w-full px-2">
                 <a href="tel:+393271159384" class="cta-button w-full navy-bg text-white py-4 rounded-2xl font-bold text-sm shadow-lg flex items-center justify-center gap-3">
-                    <span>📞</span> +39 340 794 5033
+                    <span>📞</span> +39 327 115 9384
                 </a>
                 
                 <a href="mailto:alessandroantoniomasi69@gmail.com" class="cta-button w-full bg-white border border-slate-200 navy-text py-4 rounded-2xl font-bold text-sm shadow-sm flex items-center justify-center gap-3">
-                    <span>✉️</span> Invia una Email
+                    <span>✉️</span> Scrivi Email
                 </a>
 
-                <a href="https://linkedin.com/in/alessandro-masi-biologist" target="_blank" class="cta-button w-full bg-slate-50 text-slate-500 py-4 rounded-2xl font-bold text-[11px] uppercase tracking-widest flex items-center justify-center gap-3">
+                <a href="https://linkedin.com/in/alessandro-masi-biologist" target="_blank" class="cta-button w-full bg-slate-50 text-slate-500 py-4 rounded-2xl font-bold text-[10px] uppercase tracking-widest flex items-center justify-center gap-2">
                     LinkedIn Profile
                 </a>
             </div>
         </section>
 
         <section class="glass-card p-8 shadow-lg text-center" data-aos="fade-up" data-aos-delay="100">
-            <img src="https://www.tecmed.it/wp-content/themes/tecmed/img/logo.png" alt="Tec Med" class="h-8 mx-auto mb-6 grayscale hover:grayscale-0 transition-all">
-            <h2 class="text-xl font-bold mb-3 italic navy-text">Scientific Engagement</h2>
-            <p class="text-slate-600 leading-relaxed text-[13px] italic px-4">
-                "Promuovere l'eccellenza farmacologica attraverso un dialogo basato sull'evidenza scientifica e il rigore metodologico."
+            <img src="logo_tecmed.png" alt="Tec Med Logo" class="h-10 mx-auto mb-6">
+            
+            <h2 class="text-xl font-bold mb-3 italic navy-text">Value & Innovation</h2>
+            <p class="text-slate-600 leading-relaxed text-[13px] italic px-4 mb-6">
+                "Fornire soluzioni terapeutiche d'avanguardia attraverso un approccio scientifico rigoroso, volto a migliorare la salute e la qualità della vita del paziente."
             </p>
+
+            <a href="https://www.tecmed.it/farma-farmaci-oculari-salute-oculare/" target="_blank" class="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-widest navy-text border-b-2 gold-border pb-1 hover:gold-accent transition-colors">
+                Divisione Farma & Oculistica ↗
+            </a>
         </section>
 
         <section class="grid grid-cols-2 gap-4 w-full">
