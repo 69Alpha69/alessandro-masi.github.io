@@ -1,56 +1,162 @@
-<section class="grid grid-cols-2 gap-4">
-    <div class="glass-card p-6 shadow-md cursor-pointer active:scale-95 transition" data-aos="zoom-in-right" data-aos-delay="200" onclick="openPopup('modal-ricerca')">
-        <div class="text-2xl mb-2">🧪</div>
-        <h3 class="font-bold text-sm mb-1 text-slate-900">Ricerca</h3>
-        <p class="text-[10px] text-slate-500 italic">Clicca per dettagli</p>
-    </div>
-    
-    <div class="glass-card p-6 shadow-md cursor-pointer active:scale-95 transition border-2 border-blue-200" data-aos="zoom-in-left" data-aos-delay="300" onclick="openPopup('modal-analisi')">
-        <div class="text-2xl mb-2">📊</div>
-        <h3 class="font-bold text-sm mb-1 text-slate-900">Analisi</h3>
-        <p class="text-[10px] text-blue-600 font-bold">Corso AICRO • Info ↗</p>
-    </div>
-</section>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alessandro Antonio Masi | ISF Tec Med</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:italic,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            overflow-x: hidden;
+        }
+        h1, h2 { font-family: 'Playfair Display', serif; }
+        .glass-card { 
+            background: rgba(255, 255, 255, 0.7); 
+            backdrop-filter: blur(12px); 
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 2.5rem;
+        }
+        .floating { animation: float 6s ease-in-out infinite; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        .blob {
+            position: absolute; width: 300px; height: 300px; background: #3b82f6;
+            filter: blur(80px); opacity: 0.15; z-index: -1; border-radius: 50%;
+        }
+        /* Animazione per il modale */
+        .modal-enter { animation: modalFade 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        @keyframes modalFade {
+            from { opacity: 0; transform: scale(0.95) translateY(20px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
 
-<div id="modal-container" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
-    <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm" onclick="closePopup()"></div>
-    
-    <div id="modal-analisi" class="hidden relative glass-card w-full max-w-sm p-8 shadow-2xl bg-white animate-in slide-in-from-bottom duration-300">
-        <button onclick="closePopup()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-900 text-2xl">&times;</button>
-        <div class="text-3xl mb-4">🎓</div>
-        <h3 class="text-xl font-bold text-slate-900 mb-4 italic">Formazione Specialistica AICRO</h3>
-        <p class="text-slate-600 text-sm leading-relaxed mb-4">
-            Ho recentemente completato un percorso di formazione avanzata con <strong>AICRO (Associazione Italiana Clinical Research Organizations)</strong>.
-        </p>
-        <p class="text-slate-600 text-sm leading-relaxed">
-            Questa formazione mi ha fornito competenze verticali sulla gestione dei dati clinici, GCP (Good Clinical Practice) e sui processi regolatori necessari per la corretta conduzione degli studi clinici in Italia.
-        </p>
-        <div class="mt-6 p-4 bg-blue-50 rounded-xl border-l-4 border-blue-600">
-            <p class="text-[10px] font-bold text-blue-800 uppercase">Valore aggiunto per il medico:</p>
-            <p class="text-[11px] text-blue-900 mt-1">Capacità di discutere criticamente protocolli clinici e evidenze statistiche con rigore metodologico.</p>
+    <div class="blob top-0 -left-20"></div>
+    <div class="blob bottom-0 -right-20" style="background: #1e3a8a;"></div>
+
+    <main class="max-w-2xl mx-auto space-y-6">
+
+        <section class="glass-card p-8 shadow-2xl mt-4 text-center" data-aos="fade-up">
+            <div class="relative mb-6 floating flex justify-center">
+                <div class="w-40 h-40 rounded-full border-4 border-white shadow-lg overflow-hidden">
+                    <img src="tua_foto.jpg" alt="Alessandro Antonio Masi" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <h1 class="text-4xl font-bold text-slate-900 mb-2">Alessandro A. Masi</h1>
+            <p class="text-blue-600 font-extrabold uppercase tracking-widest text-[10px] mb-6">Informatore Scientifico del Farmaco</p>
+            <div class="flex gap-4">
+                <a href="mailto:alessandroantoniomasi69@gmail.com" class="flex-1 bg-slate-900 text-white py-4 rounded-2xl font-bold text-sm shadow-lg active:scale-95 transition">Contattami</a>
+                <a href="https://linkedin.com/in/alessandro-masi-biologist" class="flex-1 bg-white border border-slate-200 py-4 rounded-2xl font-bold text-sm shadow-sm active:scale-95 transition">LinkedIn</a>
+            </div>
+        </section>
+
+        <section class="glass-card p-8 shadow-xl" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-center justify-between mb-6">
+                <img src="https://www.tecmed.it/wp-content/themes/tecmed/img/logo.png" alt="Tec Med" class="h-8">
+                <span class="bg-emerald-100 text-emerald-700 text-[10px] font-black px-3 py-1 rounded-full uppercase">Official Partner</span>
+            </div>
+            <h2 class="text-2xl font-bold mb-4 italic text-slate-800 tracking-tight">Vision Scientifica</h2>
+            <p class="text-slate-600 leading-relaxed text-sm italic">
+                "Tradurre la complessità del dato biofisico in valore clinico per supportare la classe medica nelle decisioni terapeutiche d'avanguardia."
+            </p>
+        </section>
+
+        <section class="grid grid-cols-2 gap-4">
+            <div class="glass-card p-6 shadow-md" data-aos="zoom-in-right" data-aos-delay="200">
+                <div class="text-2xl mb-2">🧪</div>
+                <h3 class="font-bold text-sm mb-1 text-slate-900 uppercase tracking-tighter">Ricerca</h3>
+                <p class="text-[10px] text-slate-500 leading-tight">Biochimica atomistica e simulazioni MD.</p>
+            </div>
+
+            <div class="glass-card p-6 shadow-md border-2 border-transparent hover:border-blue-400 active:scale-95 transition cursor-pointer" 
+                 data-aos="zoom-in-left" data-aos-delay="300" onclick="toggleModal('modal-aicro', true)">
+                <div class="text-2xl mb-2">📊</div>
+                <h3 class="font-bold text-sm mb-1 text-slate-900 uppercase tracking-tighter">Analisi</h3>
+                <p class="text-[10px] text-blue-600 font-bold uppercase animate-pulse">Dettagli AICRO ↗</p>
+            </div>
+        </section>
+
+        <section class="glass-card p-8 shadow-xl" data-aos="fade-up">
+            <h2 class="text-xl font-bold mb-6 italic text-slate-800 tracking-tight">Autorità Scientifica</h2>
+            <div class="space-y-4">
+                <div class="p-4 bg-white/50 rounded-2xl border border-white">
+                    <span class="text-[9px] font-black text-blue-500 uppercase tracking-widest">Advanced Science | 2025</span>
+                    <h4 class="text-xs font-bold text-slate-800 leading-tight mt-1 uppercase">Binding to Gangliosides: Impact of Ligand Flexibility</h4>
+                </div>
+                <div class="p-4 bg-white/50 rounded-2xl border border-white">
+                    <span class="text-[9px] font-black text-blue-500 uppercase tracking-widest">JACS Au | 2025</span>
+                    <h4 class="text-xs font-bold text-slate-800 leading-tight mt-1 uppercase">Fusobacterium nucleatum LPS Recognition</h4>
+                </div>
+            </div>
+            <a href="https://orcid.org/0000-0001-5932-7794" class="inline-block mt-6 text-[10px] font-black uppercase text-slate-400 hover:text-blue-600 transition tracking-widest">Full Scientific Record ↗</a>
+        </section>
+
+        <footer class="text-center py-10" data-aos="fade-in">
+            <p class="text-[10px] text-slate-400 uppercase tracking-[0.3em]">© 2026 Alessandro A. Masi</p>
+        </footer>
+
+    </main>
+
+    <div id="modal-aicro" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-slate-900/40 backdrop-blur-md" onclick="toggleModal('modal-aicro', false)"></div>
+        <div class="glass-card bg-white w-full max-w-sm p-8 shadow-2xl relative modal-enter">
+            <button onclick="toggleModal('modal-aicro', false)" class="absolute top-4 right-4 text-slate-400 text-2xl font-light">&times;</button>
+            
+            <div class="flex items-center gap-3 mb-6">
+                <div class="bg-blue-600 p-2 rounded-xl text-white text-xl">🎓</div>
+                <h3 class="text-xl font-bold text-slate-900 italic leading-tight">Expertise AICRO</h3>
+            </div>
+            
+            <p class="text-[11px] font-black uppercase tracking-widest text-blue-600 mb-4">Competenze Maturate:</p>
+            <ul class="space-y-3 text-sm text-slate-700">
+                <li class="flex items-start gap-3">
+                    <span class="text-blue-500 mt-1">●</span> 
+                    <span><strong>Clinical Trial Design:</strong> Comprensione profonda delle fasi I-IV degli studi clinici.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-blue-500 mt-1">●</span> 
+                    <span><strong>Normativa GCP:</strong> Padronanza delle Good Clinical Practice e dei requisiti etici.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-blue-500 mt-1">●</span> 
+                    <span><strong>Data Monitoring:</strong> Analisi critica e gestione del dato clinico secondo standard CRO.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="text-blue-500 mt-1">●</span> 
+                    <span><strong>Processi Regolatori:</strong> Conoscenza dell'iter approvativo dei farmaci in Italia ed Europa.</span>
+                </li>
+            </ul>
+            
+            <div class="mt-8 pt-6 border-t border-slate-100 italic text-[10px] text-slate-400 text-center">
+                Corso di formazione AICRO - Clinical Research Association
+            </div>
         </div>
     </div>
 
-    <div id="modal-ricerca" class="hidden relative glass-card w-full max-w-sm p-8 shadow-2xl bg-white animate-in slide-in-from-bottom duration-300">
-        <button onclick="closePopup()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-900 text-2xl">&times;</button>
-        <h3 class="text-xl font-bold text-slate-900 mb-4 italic">Ricerca Scientifica</h3>
-        <p class="text-slate-600 text-sm leading-relaxed">
-            Esperienza pluriennale in simulazioni computazionali e biofisica sperimentale (NMR), focalizzata sul riconoscimento molecolare proteina-ligando.
-        </p>
-    </div>
-</div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
 
-<script>
-    function openPopup(id) {
-        document.getElementById('modal-container').classList.remove('hidden');
-        document.getElementById(id).classList.remove('hidden');
-        document.body.style.overflow = 'hidden'; // Blocca lo scroll
-    }
-
-    function closePopup() {
-        document.getElementById('modal-container').classList.add('hidden');
-        const modals = document.querySelectorAll('#modal-container > div:not(.absolute)');
-        modals.forEach(m => m.classList.add('hidden'));
-        document.body.style.overflow = 'auto'; // Ripristina lo scroll
-    }
-</script>
+        function toggleModal(id, show) {
+            const modal = document.getElementById(id);
+            if (show) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            } else {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
+</body>
+</html>
